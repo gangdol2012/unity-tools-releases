@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "setup": {
+    "versions": []
+  },
+  "extensions": [
+    {
+      "id": "gangdol.unity-tools-base",
+      "name": "unity-tools-base",
+      "versions": [
+        {
+          "version": "0.4.2",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-base-v0.4.2/unity-tools-base-0.4.2.vsix",
+          "sha256": "17a1c433e5e18907678643cadf9ef850925529db211b16e4ce20c923b936e5cc",
+          "size": 162601,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **A record Base can't use now disables only its own component.** Base reads `state.json` one record at a time. Before, a single bad record (or a field added by a newer Base on another machine sharing the git-tracked project) made every component \"claim invalid ownership\" and stopped setup and Repair everywhere. Fields Base does not know are now ignored and written back unchanged. A damaged, duplicated, or unknown record is set aside, named in status (`stateIssues`), and replaced by the next setup; the other components keep working. A `state.json` left with merge conflicts is rebuilt as each tool is set up again, and the damaged file is kept as `state-unreadable-<transaction>.json`. Removing a component is refused while another tool's package folder that needs it is still in the project, even when that tool has no record yet. Only a record in a newer installer format stops setup, with a plain \"update Unity Tools Base\" message.\n- **OS and editor junk, and line-ending conversions, are no longer \"changed files\".** `.DS_Store`, `._*`, `Thumbs.db`, `desktop.ini`, vim swap files (`.swp`/`.swo`/`.swn`, hidden `.name.sw?`) and `name~` backups inside Unity Tools folders are ignored (unless the bundle ships that name), so they no longer block update, Repair, or removal. Swap and backup files may hold unsaved edits, so they are copied into `repair-backups/` before Base replaces or removes their folder; other file types (such as `.swf`) are never treated as junk. Text files that git che"
+        },
+        {
+          "version": "0.4.1",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-base-v0.4.1/unity-tools-base-0.4.1.vsix",
+          "sha256": "6222f8179b4e7adc0a05d27a45ad198b461e17193f4b8dc48fcca103408bd839",
+          "size": 145760,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- Bundle Base Unity package 0.1.5. It adds two bridge routes so tools can make sure Unity has picked up and compiled script changes made on disk, even when Unity is in the background or Auto Refresh is off:\n  - `POST /v1/base/scripts/refresh` (body `{\"forceCompile\": false}`, optional) refreshes the Asset Database. If a script source (`.cs`, `.asmdef` or `.asmref` under `Assets/` or an embedded or local package) changed since the last finished compile started, or `forceCompile` is true, and Unity isn't already compiling, it asks Unity to compile. In Play Mode it never starts a compile and never stops the game; it reports `stalePlayMode` with a plain reason instead.\n  - `GET /v1/base/scripts/status` answers without waiting for Unity's main thread: compiling/importing flags, the last compile's start, finish and result, up to 30 compile errors (file, line, column, message), the stale script count and the last script reload time. The last compile result survives script reloads.\n- Both routes are registered before the bridge starts listening, so while `GET /v1/base/status` answers, a 404 \"Route not available.\" from them means the project has an older Base package.\n- Existing routes, setup, repair, removal and status behave exactly as before. No Editor update callback or timer was added; the stale-script scan runs only on request and is cached for 2 seconds."
+        },
+        {
+          "version": "0.4.0",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-base-v0.4.0/unity-tools-base-0.4.0.vsix",
+          "sha256": "93920645954f54d21fac22b761e613c2bec5f6cf5e8c9194a709953c295f618c",
+          "size": 135632,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- Simplify transactions: each install, update, repair, and removal stages the bundled files, swaps them in, and rolls back from memory if a step fails. Durable crash journals bound to the project path, the separate modal recovery agreement, the `recover` installer command (now `unsupported`, pointing to Repair), project-move rebinding checks, and the quarantine folder are gone. After an interrupted operation, **Repair** is the recovery path: it reinstalls the bundled files, accepts files that already match the bundle, and backs up changed recorded files first. A moved or copied project keeps working; the next write records its new path.\n- A user-modified file is still backed up before Repair overwrites it, but only the newest repair backup of each component is kept. Older backups are deleted only when they are exactly what Repair wrote; edited backups and unknown folders are kept and reported.\n- Clean up leftovers from earlier versions automatically on the next install, update, repair, or removal: finished journals, staging copies, empty quarantine and staging folders, the installer's own state copies, and saved project-file copies identical to the current file. Anything that might hold user data (unfinished journals, quarantined files, differing saved copies) is kept and listed as `leftovers` in status and the setup output. Leftovers never block setup.\n- Removal runs while Unity is open, like install, update, and repair; Unity reimports when the package folder disappears.\n- "
+        }
+      ],
+      "displayName": "Unity Tools Base",
+      "description": "Install, repair, and monitor Unity Editor tools with clear setup results and live updates.",
+      "summary": "Installs the Unity Tools packages into your Unity project and keeps them working. Every other tool needs it.",
+      "order": 1,
+      "needs": [
+        "editor",
+        "unity"
+      ],
+      "worksWith": [],
+      "recommended": true
+    },
+    {
+      "id": "gangdol.unity-play-tools",
+      "name": "unity-play-tools",
+      "versions": [
+        {
+          "version": "0.4.6",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-play-tools-v0.4.6/unity-play-tools-0.4.6.vsix",
+          "sha256": "a28b896dd0daa4d0ccaf8176d78767a0d2cf0ee3272314173c66f24517e2ba26",
+          "size": 291829,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Unity package **0.1.11**. Accepts Unity Tools Base 0.4.2 (package 0.1.6) and any newer Base that keeps API version 1's methods. Edit and Debug are unchanged; the extension API stays `apiVersion: 1` / `apiVersions: [1, 2]`. Streaming keeps its per-frame cost: the new checks run only while no stream is active, once per delivered input, or after a view change. Nothing here was run in a live Unity yet.\n\n- **Remote input is delivered without a frame client.** An `/input` request now counts as demand by itself, so an agent's taps, drags and keys reach the game while the Play panel is hidden in a background tab or closed. Before, Unity accepted them (202) but delivered them only while a visible panel fetched frames, so they silently vanished and replayed later. Input sent without a stream (an agent's) keeps held touches, keys and mouse buttons held up to 10 minutes after its last request, matching the agent's own hold renewal; input sent while a stream was active (the panel, a phone) is released about 2.5 s after that stream and its input stop, as before, so a reloaded editor or a phone that lost Wi-Fi never leaves anything pressed.\n- **Input is never replayed late.** Queued input that the running game could not receive for more than 3 seconds is dropped instead of being delivered on a screen that has moved on; everything held is released and the status input error says how many inputs were dropped and to send them again. A steady backlog (one transition per player input update) nev"
+        },
+        {
+          "version": "0.4.5",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-play-tools-v0.4.5/unity-play-tools-0.4.5.vsix",
+          "sha256": "473c5422a894731aa062c89f1a5ad3e0c962c080a500338b85a67f282ee51b1b",
+          "size": 279438,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Unity package **0.1.10**. Base, Edit and Debug are unchanged. The desktop panel, its stream, the agent routes and recording behave exactly as before.\n\n- **Live game sound for Unity Connection.** New `GET /audio?epoch=&after=&waitMs=` long-poll route returns the active AudioListener's mixed output as interleaved 16-bit PCM (`application/vnd.unity-play.pcm16`) at Unity's output sample rate; mono stays mono and surround is mixed down to stereo. Positions are sample frames on a timeline (epoch), so a client can tell gaps from new timelines; one response holds at most 250 ms and a client more than 2 s behind skips forward.\n- Unity attaches a hidden tap (a second instance of the recorder's Editor-only tap component) only while a client asked within the last 2.5 s and only in Play Mode, follows AudioListener changes twice a second, and removes it when nobody listens, Play Mode ends or scripts reload. The game's sound and the Game view's mute setting are untouched. Idle cost stays at lock-free reads per Editor update.\n- When there is no sound the route answers `204` with the reason in `X-Unity-Play-Audio-Note` (not in Play Mode, no active AudioListener, no sound delivered yet).\n- Connection API: `createClient()` clients gain an additive `audio(epoch, after)` method on their own bridge connection, so sound never waits behind frames, status or input. `apiVersion` stays 1.\n- The Play skill's protocol reference documents the route.\n- Requires Unity Connection Tools 0.4.1 and Unity Connec"
+        },
+        {
+          "version": "0.4.4",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-play-tools-v0.4.4/unity-play-tools-0.4.4.vsix",
+          "sha256": "90b10143da34d3fa76d79dfc9554af2570112b0276b86649f8e847ead7dca499",
+          "size": 272647,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Unity package remains **0.1.9**.\n\n- Add a host-only, typed Connection API for developer-facing Play controls, views, device selection, rotation, input and JPEG streaming. Base credentials remain inside the editor host.\n- Keep existing extension API versions and desktop behavior. Existing agent capture, recording, logs, lookup and signature APIs remain unchanged.\n- Requires Unity Connection Tools 0.4.0 and Unity Connect Android 0.3.0 for phone Play."
+        },
+        {
+          "version": "0.4.3",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-play-tools-v0.4.3/unity-play-tools-0.4.3.vsix",
+          "sha256": "31d0e4b2314dac6d567aae46edfcf7966cf3e81167be92312b5b58fb306ba515",
+          "size": 270735,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Unity package **0.1.9**. Base, Edit and Debug are unchanged. On macOS every control, route, response, setting and panel behaviour stays the same. Nothing here was run on Windows; the design budget is in `docs/recording-windows-0.4.3.md`.\n\n- **Recording on Windows (and Linux).** When the client names no encoder, `POST /record/start` no longer uses VideoToolbox outside macOS, where it can't work. The default there is software H.264 at a near-lossless fixed quality (`libx264 -preset ultrafast -crf 12 -pix_fmt yuv420p`, BT.709 limited-range tags).\n  - It's limited to `max(1, ⌊0.3 × logical cores⌋ − 1)` encoder threads, so recording plus the stream stay within Play's 35% CPU budget by design.\n  - Clients that know the machine pass a hardware encoder in `videoCodecArgs`, as before. Unity Agent Tools 0.2.5 does this.\n- **Windows-correct ffmpeg arguments.** The output path is quoted with the C runtime's rules, so `C:\\Users\\…` reaches ffmpeg with single backslashes. macOS and Linux keep Mono's rules.\n- **ffmpeg below normal priority on Windows.** Under CPU contention the recording drops (and counts) frames instead of slowing Unity or the stream.\n- **The stream on Windows** needs no change. Its budget is enforced from timings measured on the running machine, so the 35% cap for BC7 and the 50% JPEG-fallback policy apply as on macOS. The new doc records the assumptions: Direct3D 11/12 or Vulkan for the compute encoder, and BPTC through ANGLE on Direct3D 11 in the panel.\n- The protocol re"
+        },
+        {
+          "version": "0.4.2",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-play-tools-v0.4.2/unity-play-tools-0.4.2.vsix",
+          "sha256": "04edd2c3ec6b18b2a82ef90d4d0f982bd4f61500b01dfcf760935f5b50513dab",
+          "size": 264088,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Unity package **0.1.8**. Base, Edit and Debug are unchanged; every existing Play control, route, response field, setting and panel behaviour stays the same. Everything below is additive, for Unity Agent Tools.\n\n- **Still capture.** `POST /capture` returns a PNG of the selected Game or Simulator view at its native resolution, in Play Mode and in Edit Mode, from one GPU readback of the render target the stream already reads; the PNG is encoded off Unity's main thread. A covered play-view tab is shown for the capture and the previous tab is restored.\n- **Editor windows.** `GET /windows` lists open Editor windows; `POST /capture-window` returns a PNG of one window's current pixels (Inspector, Console, Scene, Hierarchy, Animator…) at the display's scale. A covered tab is brought forward for the capture, then the previous tab and keyboard focus are restored in the same Editor update.\n- **Locate.** `GET /locate` finds objects by name, hierarchy path, part of a name or visible UI text and reports their on-screen rectangle and centre in exactly the normalized space `/input` uses, whether they are interactable, and what the topmost raycast hit at the centre is (`blockedBy`). uGUI is reached through reflection; the package gains no uGUI dependency.\n- **Console logs.** `GET /logs` long-polls (up to 1 s, off the main thread) a 4096-entry / 4 MB ring fed by `Application.logMessageReceivedThreaded`. Sequence numbers keep increasing across script reloads and the response says when older mess"
+        }
+      ],
+      "displayName": "Unity Play Tools",
+      "description": "Streams Unity Game and Device Simulator views with Play controls, device selection, rotation, and input, locally or through Unity Connection.",
+      "summary": "Shows your running game inside VS Code, with Play controls, devices, rotation and input.",
+      "order": 2,
+      "needs": [
+        "editor",
+        "unity"
+      ],
+      "worksWith": [],
+      "recommended": true
+    },
+    {
+      "id": "gangdol.unity-edit-tools",
+      "name": "unity-edit-tools",
+      "versions": [
+        {
+          "version": "0.6.21",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.21/unity-edit-tools-0.6.21.vsix",
+          "sha256": "992a72c9e515a63e9c6b97980d1fd9455ed49de61369599eae5a6bbfefc66a0d",
+          "size": 862264,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Cut what grew far beyond the user's own rules. An audit compared today's rules and internal logic with the user's own Codex prompts. The user's rules for the same things were about 5 KB in total, while the Apply prompt was about 80 KB, the toolkit had about 280 refusal paths, and there were 7 stacked verification layers. The user's direction:\n- don't pile up safeguards because Unity, the AI or loops might do anything;\n- no citation, quote or \"record why\" demands on the model;\n- Apply replaces state by nature, so losing pre-Apply data is grade 2–3 at most;\n- remove rollback;\n- automatic recovery has little meaning: the result so far stays and Apply again continues from it;\n- relax Unity-driven concurrency limits except for the same destination.\n\nThe audit is in `plugins/.unity-tools-resume/complexity-audit-2026-11-01/`. This version covers source and the packaged payload only; it does not install itself. Not yet run in a live Unity.\n\n**Rollback and recovery removed (Apply, toolkit, Unity)**\n- **No Apply rollback, restore, reconcile or recovery records.** After a failure or Stop, the changes made so far stay in Unity (not verified), and Apply again continues from them.\n  - Removed: the panel's Restore and recovery buttons, the startup and pending-run checks that blocked a new Apply, the reconcile and rollback routes, Legacy's whole-project snapshot and lock, and the managed fence with its \"nothing else changed\" proofs.\n  - Deleted modules: `projectMutationTransaction.js`, `mana"
+        },
+        {
+          "version": "0.6.19",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.19/unity-edit-tools-0.6.19.vsix",
+          "sha256": "476aeba2a6a8762d728d2aeac51322d1c3294bdcace0b7371bbab89b30066202",
+          "size": 936882,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Fix pass: no rule throws away validated work, checks fail only for real problems, and the in-tool model writes no paperwork. Source and packaged payload only; this build does not install itself. Not yet run in a live Unity.\n\n**Toolkit and recovery**\n- **Agent toolkit sessions never throw away their work.** Going idle, `close()`, extension shutdown or window reload, and a user Apply after a refused commit now keep the changes with a restore point (state `'kept'`, `kept: true`, `recoveryId`) and release the target, like Apply since 0.6.18. `keepAlive()` lets Agent's heartbeat hold a session open.\n- **An earlier record no longer locks a target or another destination.** Toolkit open and Apply keep what an earlier unfinished run left and continue on top. Each destination has its own pending record, and \"keep\" is refused only while a Unity operation is still running.\n- **Edits Unity never received don't jam a session.** A submit, cancel or rollback that provably never reached Unity is sent again when Unity is back, or reported as not sent (`UNITY_NOT_REACHED`, `UNITY_NOT_RUNNING`, `NOT_RECEIVED`), and a new plan can go ahead.\n- **Damaged records recover.** A damaged or merge-conflicted `application-bindings.json` or `managed-bindings.json` is backed up and repaired instead of stopping every Apply. A record that can't be read, or whose Unity job was pruned, can be kept or cleared. Journal limits match what a session can write (16 MB / 4096 entries).\n- **Restore refuses only for real"
+        },
+        {
+          "version": "0.6.18",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.18/unity-edit-tools-0.6.18.vsix",
+          "sha256": "b42c382ba710fcaf7ef9a566d1a68afabebc028578901ec91ef0591c5e40d514",
+          "size": 875065,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Rollback becomes an option: an Apply that ends without a verified result keeps what it applied. Source and packaged payload only; this build does not install itself.\n\n- **A blocked, limited, failed or cancelled managed Apply keeps its changes in Unity** instead of undoing them automatically. The result says so (\"The changes made so far were kept in Unity; they are not verified\"), with code `APPLICATION_KEPT_UNVERIFIED` for agents, and is never reported as success: \"applied\" still needs the full verification. An Apply that applied nothing still gets the usual check that nothing changed. Legacy mode is unchanged.\n- **Restore previous state stays one click away.** The kept run keeps its restore point: the panel's recovery notice offers Restore previous state and Continue (the same version again, on top), and agents get the same through `apply_recover`.\n- **Applying again keeps an unfinished earlier Apply instead of refusing.** A new Apply on the design accepts what the earlier one left in Unity, closes its record (its restore point ends there) and says so. Only an earlier Unity operation that is still running holds it back.\n- **\"keep\" is always available** except while a Unity operation is still running. It was refused whenever a restore had been refused, which left no way out: on Windows (10-13) a fruit-game Apply ended blocked while another Apply and the toolkit were editing the same scene, its automatic undo was refused, and the design stayed locked for every later Apply.\n- W"
+        },
+        {
+          "version": "0.6.17",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.17/unity-edit-tools-0.6.17.vsix",
+          "sha256": "d76ac46d257d766b8ca49dda874c637f1094216f7846746b745698d1fc42d35d",
+          "size": 872954,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Apply's Codex gets the Unity SDK as tools. Source and packaged payload only; this build does not install itself.\n\n- **`unity_edit` tools on every new managed Apply thread**, handed over the way Unity Agent Tools hands out its tools (`dynamicTools`): `inspect` (optionally narrowed by name, path, handle or component), `declare_content`, `apply`, `capture` (returns the image itself), `request_font` and `schema`. `apply` takes the EditBatch method calls a script would make, as JSON (`{\"method\":\"placeSprite\",\"args\":[...]}`), builds the batch with the bundled SDK and answers when Unity has finished.\n- **Same session, same behavior.** The tools run the bundled SDK inside Edit against the same Apply session a script reaches through its session file, so checks, recovery and results are identical; a test confirms a tool batch submits exactly the operations of the same script. Scripts still work for anything the tools can't express.\n- Why: every inspect, apply and capture used to be a script Codex wrote and launched through the editor's executable, after reading the SDK source to learn it (median 7 such steps per Apply, ~11% of Edit's tokens; reading Edit's own code another ~8%). A long apply now answers once, instead of being polled.\n- Codex fixes a thread's tools when it starts, so an Apply conversation started before 0.6.17 keeps using scripts. The tools use Codex's experimental app-server API, as the OpenRouter tool (0.6.15) and Unity Agent Tools already do."
+        },
+        {
+          "version": "0.6.16",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.16/unity-edit-tools-0.6.16.vsix",
+          "sha256": "880d5c9193fd80904f82de23f2fe5011657b00266c307d208c963be539636d68",
+          "size": 867797,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Apply stops asking Codex to copy what Edit already knows, and Generate and Apply wait once instead of polling. Source and packaged payload only; this build does not install itself.\n\n- **`application-evidence.json` needs only the renders you looked at.** Edit now fills in the rest itself when it checks the result: the source and target and their hashes, the workflow, the extraction manifest (this run's newest `assembled-*/extraction.json`, or in a continuation without one the continued run's newest), every changed file and every hash. The agent lists `rendered_views` as paths (`[\"evidence/final-unity.png\"]`). The staged file is now `{schema_version, rendered_views: []}`. Before, the agent had to type each of these, and Edit then recomputed them all and compared them, so a slip in a copied hash or path only cost a repair turn.\n- **The checks are the same, against Edit's own measurements.** The source must be unchanged, every changed file is bound to its bytes, renders must be complete PNGs saved in the workspace and newer than the destination's last change, and the extraction manifest is verified independently.\n- **What still comes from the agent:** the renders it inspected, plus `workflow` only when no extraction was assembled (`\"alternative\"` for existing art, with those files as `artifacts`; `\"reuse\"` for unchanged sprites). `extraction_manifest` is named only to use an assembly other than the newest.\n- **Older evidence still works.** Fields an agent still writes (a resumed "
+        }
+      ],
+      "displayName": "Unity Edit Tools",
+      "description": "Preview, generate, compare, and apply image-backed designs to Unity prefabs or scenes — screens, UI and game assets for 2D games (UI as Canvas objects, game-world parts as SpriteRenderers) — with a switch back to the original workflow.",
+      "summary": "Design screens and art with AI and apply them to your prefabs and scenes.",
+      "order": 3,
+      "needs": [
+        "editor",
+        "unity",
+        "node",
+        "codex",
+        "python"
+      ],
+      "worksWith": [],
+      "recommended": true
+    },
+    {
+      "id": "gangdol.unity-debug-tools",
+      "name": "unity-debug-tools",
+      "versions": [
+        {
+          "version": "0.4.4",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-debug-tools-v0.4.4/unity-debug-tools-0.4.4.vsix",
+          "sha256": "d01460880c6cdd558ad26885e77801f231850b9f1496fb80e2690aca06d90d6c",
+          "size": 291012321,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base",
+            "gangdol.unity-play-tools"
+          ],
+          "notes": "Unity package 0.1.4. Fixes from the 2026-10-28/29 audits: checks that stopped more than they protected now stop only the part they protect, and nothing that already worked is thrown away.\n\n- **Another Multiplayer Play Mode version no longer turns isolated sessions off.** Only 2.0.2 was accepted, so one Package Manager update broke every isolated session, stopped virtual project cleanup and showed main-Editor DEBScript as \"Disabled\". Other versions now get one warning per Unity session, and the existing API signature checks decide; if they fail, the message names the installed and verified versions. Main-Editor DEBScript depends only on the script compiler.\n- **Stop works while a session is still starting, and Debug Tools waits until it has really stopped.** Stop was refused (409) until the child published its connection file, was tried once, and the session vanished from the list as soon as Unity accepted the request, so a \"cancelled\" launch could keep starting and hold the game-view slot. The original Editor now saves a stop request the child reads while starting, after reloads and every second; closes a still-starting child it launched through Multiplayer Play Mode (its process ID and start time are checked); and retries shutdown. The session shows \"Stopping…\" until Unity reports it gone (up to 90 seconds), and a failed stop is sent again. If Unity never confirms, the session stays listed with a plain message. API `stop` now returns `{ sessionId, stopped: true }`.\n- **A scr"
+        },
+        {
+          "version": "0.4.3",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-debug-tools-v0.4.3/unity-debug-tools-0.4.3.vsix",
+          "sha256": "e0aee6e8dc2ac0fc3991d58753c9d97f7d47d312eca31f7ae84cbc8940d38864",
+          "size": 290993739,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base",
+            "gangdol.unity-play-tools"
+          ],
+          "notes": "- Request UTF-8 output when PowerShell discovers Windows Unity processes, preserving Korean and other non-ASCII project paths. The Unity package and debugger binaries are unchanged.\n- Validated with local discovery tests and package integrity checks; Windows live execution was not performed."
+        },
+        {
+          "version": "0.4.2",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-debug-tools-v0.4.2/unity-debug-tools-0.4.2.vsix",
+          "sha256": "8a0eb3ce6e15a47163c095b977a498ad0140edcb160ecaeda84f211f3f0197b0",
+          "size": 290993559,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base",
+            "gangdol.unity-play-tools"
+          ],
+          "notes": "- **`Deb.Log` is accepted as another name for `Deb.Print`** in DEBScript, with identical output and reporting. Found in live tests: agents kept writing `Deb.Log`. `Deb.Print` stays the documented primary. Everything else is unchanged."
+        },
+        {
+          "version": "0.4.1",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-debug-tools-v0.4.1/unity-debug-tools-0.4.1.vsix",
+          "sha256": "f17c74a827208fed2f3d04b7f243cc2b531059aab47d8d2700dd85bb95527407",
+          "size": 290993279,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base",
+            "gangdol.unity-play-tools"
+          ],
+          "notes": "Additions only; every existing route, command, default and prompt behaves as in 0.4.0.\n\n- Run DEBScript in the main (original) Unity Editor, in Edit Mode or Play Mode, through new\n  original-Editor routes `GET /main/status`, `POST /main/execute` and `POST /main/cancel`\n  (Unity package 0.1.3). The language, helpers and result shape match isolated sessions.\n  One script runs at a time; Unity rejects new ones with `retryable: true` while it compiles,\n  imports, builds or changes Play Mode. ADVANCE needs Play Mode paused and re-pauses when the\n  script ends. A script reload or Play Mode change ends a running main script as failed with a\n  plain reason, and the result survives the reload. Trace is not available in the main Editor.\n  Each run loads one small assembly into the main script domain until the next domain reload.\n- Extension API version 2 keeps every version 1 member and adds `mainStatus`, `runMain`,\n  `executeMain`, `advanceMain`, `waitMain`, `inspectMain` and `cancelMain`.\n- Opt-in `noUserInterface: true` for API callers (launch options, run/wait/inspect options and a\n  new optional trailing options argument elsewhere): a step that would show a picker, dialog,\n  dashboard, script console or progress notification fails with a plain error instead.\n- CLI `--main` for run, inspect, status, cancel, wait, execute and advance."
+        }
+      ],
+      "displayName": "Unity Debug Tools",
+      "description": "Independent Unity Editor and Player debugging, plus isolated Native and Headless sessions with DEBScript, traces and Device Simulator streaming.",
+      "summary": "Debug your game's scripts in the Editor or on a device, with traces and scripted test sessions.",
+      "order": 4,
+      "needs": [
+        "editor",
+        "unity"
+      ],
+      "worksWith": [],
+      "recommended": true
+    },
+    {
+      "id": "gangdol.unity-agent-tools",
+      "name": "unity-agent-tools",
+      "versions": [
+        {
+          "version": "0.2.13",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.13/unity-agent-tools-0.2.13.vsix",
+          "sha256": "b3777341962335cab75b60d657c8d3f6a33c567ca7a38b132be9e9aa4c7afa3d",
+          "size": 18028831,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Apply and toolkit restore removed, with Edit. After a failure or Stop the result so far stays and Apply again continues from it.\n\n- **Removed `apply_recover`, `toolkit_recover` and `toolkit_rollback`**, the error mappers that pointed Codex at them, and the instructions' Toolkit recovery and Apply recovery rules. Edit drops the API behind them (`listApplicationRecoveries`, `recoverApplication`, `listToolkitRecoveries`, `recoverToolkit`, the toolkit session's `rollback()`). Why: the user's direction is that losing pre-Apply content is grade 2–3 and automatic recovery means little; and the rollback audit (2026-11-01) found no live run where a restore helped, while the locks, records and refusals that exist for restore caused about 25 grade 3–5 incidents, including the G4/G5 lock-ups (designs and scenes locked for good, runs stuck needing recovery).\n- **Kept results say what stays.** An Apply that ends `APPLICATION_KEPT_UNVERIFIED` says its changes so far stay in Unity: look at the destination and continue on top of it (Apply again, `continue_from` when offered, or the toolkit for small fixes). A toolkit session Edit ends without a commit says its changes stay and the next `toolkit_open` continues from them. A refused `toolkit_commit` keeps the session open: fix and commit again.\n- **Instructions match.** The toolkit is no longer described as having a rollback \"safety net\" (Unity validates each batch; a failed batch changes nothing); `task_stop` no longer says Apply restores the "
+        },
+        {
+          "version": "0.2.12",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.12/unity-agent-tools-0.2.12.vsix",
+          "sha256": "f54a961d8657fc22897e5b943fbc5988e619fa733fb56875b564011fad099bfe",
+          "size": 18029780,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Fix pass: fewer model steps spent waiting, compiles that wait as long as Unity works, compile errors that no longer stop unrelated steps, and Play tool fixes. Investigation items P01, P07, P37, V32, V33, V54, E181 and E189.\n\n- **One long wait instead of polling.** In live runs 57% of Agent tool calls were status checks: Codex gave `wait_task` 45 s, its code cell handed control back after about 30 s, and it then waited in 20 s steps, two model requests per wait at about 150k input tokens each. `wait_task` now returns the moment a task finishes, needs an answer from Codex (any question except a font question already shown to the user), or reaches the requested stage; it takes `ids` to wait for several tasks at once (returns when any is ready); and it returns a compact view (state, stage, the last five messages, question, result, `next`) instead of up to 40 messages. Its description states the default (300 s) and recommends 600 s. A new instructions section, \"Waiting: one long wait, never polling\", mirrors Edit 0.6.16: the maximum timeout for every wait (`wait_task`, `unity_agents.wait`, Play and Debug `wait_until`, `wait_execution`), the code-mode pragma `// @exec: {\"yield_time_ms\": 620000}` on a cell that waits, one `wait` with the same yield on a cell that still runs, and no `task_status`/`tasks`/`list` calls between waits.\n- **Waits keep what you started alive.** While a wait call runs, the recordings, sessions, toolkits and held input its chat started are renewed, so one 60"
+        },
+        {
+          "version": "0.2.11",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.11/unity-agent-tools-0.2.11.vsix",
+          "sha256": "e3a8e8eaf95e52cb36af94bf3b3de4e139b0f5a7d71104f6133eb5318b17b094",
+          "size": 18007610,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Edit 0.6.18 keeps partial Apply results, and the agent works with them.** When an Apply task ends with `APPLICATION_KEPT_UNVERIFIED`, its changes stay in Unity, unverified, with a restore point. The task's `next` and the Unity instructions say to capture and check the destination, keep going on top of it (Apply again, or the toolkit for small fixes), tell the user what is still unverified, and use `apply_recover` \"restore\" only when the kept result is worse than before. Before, an Apply that couldn't finish undid itself, and the agent stopped."
+        },
+        {
+          "version": "0.2.10",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.10/unity-agent-tools-0.2.10.vsix",
+          "sha256": "6a4831a969ef74535fa7475e8871333fdeb9436d02c39276c8cdb9edeb91ca97",
+          "size": 18007083,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **A Stop pauses the work; it no longer reads as \"cancel\".** After a Stop (the panel's Stop button, Unity Connect's stop, or another agent's interrupt), Codex added its own \"the previous turn was interrupted on purpose\" notice, and the next message started a new turn with nothing saying the earlier request still stood. A follow-up such as \"use 2× for Apply\" was then answered and the game build was dropped until the user typed continue (investigation P11). Now the first message after an interrupted turn carries a short note, visible to Codex only, that the earlier request is still in effect and the message adds to it. It is added once, only after an interrupted turn (not after a turn that finished, not to messages that steer a running turn), and also when a saved chat whose last turn was stopped is reopened. Unity chats' instructions gain the rule: stop working on a request only when the user says to stop or drop it. The Stop button itself is unchanged."
+        },
+        {
+          "version": "0.2.7",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.7/unity-agent-tools-0.2.7.vsix",
+          "sha256": "b8dec40bcb3efc73354466d940f973ea78247f42282e6cb2d98cd760fcbaeb3e",
+          "size": 18005901,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Agents can resolve an unfinished Apply (with Unity Edit Tools 0.6.5).** When an Apply ends without a confirmed result, Edit keeps a recovery record and refuses the next Apply on that design (\"The earlier application still needs checking\"). Only the Edit panel had the actions to settle it, so in live run 16 Codex tried screen control on the panel. New tool `apply_recover` with the panel's actions: \"list\", \"check\" (what Unity holds now, why the record is still open, e.g. Play Mode, and its records folder), \"keep\", \"continue\" (applies the same version again to that destination, as the panel's Continue does), \"restore\" and \"cancel\". `task_status` and `wait_task` add a `next` hint naming it when an Apply task ends this way, and the instructions say to use it and never to drive the Edit panel with screen control."
+        }
+      ],
+      "displayName": "Unity Agent Tools",
+      "description": "A Codex chat panel that can play, record, debug and edit your Unity project through Unity Play, Debug and Edit Tools.",
+      "summary": "A Codex chat that can play, record, debug and edit your Unity project for you.",
+      "order": 5,
+      "needs": [
+        "editor",
+        "unity",
+        "codex"
+      ],
+      "worksWith": [
+        "gangdol.unity-play-tools",
+        "gangdol.unity-edit-tools",
+        "gangdol.unity-debug-tools"
+      ],
+      "recommended": true
+    },
+    {
+      "id": "gangdol.unity-connection-tools",
+      "name": "unity-connection-tools",
+      "versions": [
+        {
+          "version": "0.4.2",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-connection-tools-v0.4.2/unity-connection-tools-0.4.2.vsix",
+          "sha256": "8d5c0d7c207663eef4cab7ef732b8d6327bca3bc089131de20fe501740c15227",
+          "size": 164230,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Phone screens and notifications keep working after a window reloads.** A window gets a new id whenever it reloads, updates or restarts, so every open phone screen and earlier notification used to fail with \"That project window was closed.\" The bridge now remembers which project each window id belonged to (`phone-windows.json`) and sends a request for an id that is gone to the one window now open on that project; events keep the id the phone used. Live updates keep coming too: when a window a phone subscribed to goes away, the bridge waits up to two minutes for that project's window to be back and subscribes it again under the same id, so open screens (also in Unity Connect 0.3.2) don't freeze. With no such window it still says the window was closed; with several open on that project it asks you to pick one (`WINDOW_AMBIGUOUS`) instead of guessing.\n- **Closing the pairing tab or stopping `unity-connect pair` keeps the code.** A phone that scanned the code saves the pairing at once but may connect a little later (another network, the editor busy); deleting the code then left the phone with a pairing the PC refused. An unused code still expires after 24 hours, and `unity-connect forget <id>` cancels one sooner. The terminal no longer claims \"No phone scanned the code\" (it can only see a phone connect); it says no phone has connected yet and that the code keeps working for 24 hours.\n- **A phone is told \"unknown device\" only by the computer it is paired with, and only after a "
+        },
+        {
+          "version": "0.4.1",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-connection-tools-v0.4.1/unity-connection-tools-0.4.1.vsix",
+          "sha256": "76f3c11ce99f10ec2fb24deaa83b571518e71f17036c3141c0ddb919cbb380cf",
+          "size": 153186,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- Stream game sound to Unity Connect on Android. A Play stream started with `\"audio\": true` forwards Unity's live game sound as encrypted `play.audio` packets (16-bit PCM, mono or stereo) next to the video. Sound needs no acknowledgements, so it keeps flowing while video waits for the phone to draw; a congested connection drops it before encryption.\n- Report why there is no sound with `play.audio.status` events (no active AudioListener, Unity's Play package not updated yet, and so on). Older Play extensions keep video working and return `audio: false` with the reason.\n- `play stream` prints sound packet metadata as `audio` records when asked for sound. Only video frames are acknowledged by the CLI and the phone bridge.\n- Existing requests, frames, input and pairing are unchanged; sound is off unless a client asks for it. Requires Play 0.4.5 (Unity package 0.1.10) and Android app 0.3.1 for sound."
+        },
+        {
+          "version": "0.4.0",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-connection-tools-v0.4.0/unity-connection-tools-0.4.0.vsix",
+          "sha256": "9eaf1647c38a93c3dfc2f46f8309399efc2ddd5eea1a05483440ffd2115f0a09",
+          "size": 151015,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- Expose the developer-facing Play UI through the encrypted phone bridge and CLI: Play/Stop/Pause/Resume/Step, native Game/Simulator selection, device catalogue, rotation with angle, stream and input. Android adds local zoom and fullscreen.\n- Add opt-in binary streaming without base64. Limit frames in flight to two, drop congested frames before encryption, and adapt frame rate up to 60 FPS without downscaling.\n- Gate input on acknowledged frames from the current stream, Editor identity and view revision. Release held input on view changes and disconnects; serialize input transitions and bound queues.\n- Preserve existing JSON requests, Agent/Edit APIs, pairing and protocol version. Requires Play 0.4.4 and Android app 0.3.0 for new Play features."
+        }
+      ],
+      "displayName": "Unity Connection Tools",
+      "description": "Use Unity Agent, Edit, and Play from Unity Connect for Android or a terminal, with encrypted live Play streaming and input.",
+      "summary": "Use Agent, Edit and Play from your Android phone or from a terminal.",
+      "order": 6,
+      "needs": [
+        "editor",
+        "codex"
+      ],
+      "worksWith": [
+        "gangdol.unity-agent-tools",
+        "gangdol.unity-edit-tools",
+        "gangdol.unity-play-tools"
+      ],
+      "recommended": false
+    }
+  ],
+  "repository": "gangdol2012/unity-tools-releases",
+  "updatedAt": "2026-11-01T03:59:47.250Z"
+}
