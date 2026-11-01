@@ -156,6 +156,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.22",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.22/unity-edit-tools-0.6.22.vsix",
+          "sha256": "125a5d61b24b016c00f70cb9724a95cedbcf40d03359fb08d272a41a656ceac4",
+          "size": 863123,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Codex installed with npm on Windows is found.** npm puts only a `codex.cmd` launcher on PATH, and Edit looked only for `codex.exe`, so Apply to Unity fell back to the pinned Codex 0.144.6. That Codex's image tool can't make transparent backgrounds, so pieces couldn't be cut out (\"the image tool doesn't support the transparent background option\"). Edit now also looks for the `codex.exe` inside an npm install (in each PATH folder and in `%APPDATA%\\npm`) and runs it in place, next to the helper programs it needs. A folder's own `codex.exe` still comes first.\n- README: Apply needs Codex 0.160.0 or newer for transparent images; Unity Tools Setup 0.1.1 checks which Codex Apply will use and installs or updates it, and downloads the pinned Codex ahead.\n- Unchanged: the pinned version (0.144.6), which Codex each action uses, and the compatibility check."
+        },
+        {
           "version": "0.6.21",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.21/unity-edit-tools-0.6.21.vsix",
@@ -421,5 +433,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-01T04:30:03.616Z"
+  "updatedAt": "2026-11-01T09:25:27.849Z"
 }
