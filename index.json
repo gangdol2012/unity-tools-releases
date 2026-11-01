@@ -3,6 +3,29 @@
   "setup": {
     "versions": [
       {
+        "version": "0.1.1",
+        "date": "2026-11-01",
+        "notes": "Codex now has to be 0.160.0 or newer, the first version that can make images with transparent backgrounds, which Unity Edit Tools needs to cut a design into pieces. New checks: which Codex Unity Edit Tools' Apply to Unity will really run (found with Edit's own code) and whether it can make transparent images; and the Codex Edit uses for Generate, which Setup now downloads ahead. On Windows, Codex installed with npm needs Unity Edit Tools 0.6.22 or newer.",
+        "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-setup-v0.1.1",
+        "downloads": {
+          "mac-arm64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.1/Unity-Tools-Setup-mac-arm64.dmg",
+            "sha256": "f1be69fd92b58e2749990bf5076d458811829a05dba323831dd94291b218696a",
+            "size": 129883861
+          },
+          "mac-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.1/Unity-Tools-Setup-mac-x64.dmg",
+            "sha256": "1bfb13219293f885ef45b47ddbf1fdf5227d277e644fc492c4e00697896c03e7",
+            "size": 136693128
+          },
+          "win-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.1/Unity-Tools-Setup-win-x64.exe",
+            "sha256": "d9f7ab6e330787beedc13c7190c295aef4dbb044f33ef22f35bdb365412e69c9",
+            "size": 120672747
+          }
+        }
+      },
+      {
         "version": "0.1.0",
         "date": "2026-11-01",
         "notes": "First release of Unity Tools Setup. It installs VS Code, Node.js, Codex, Python, Git, Unity Hub and your project's Unity Editor; signs you in to Codex; installs, updates and removes the Unity Tools extensions (newest by default, or any published version); and checks that everything works, with a fix for each problem. The app isn't signed with a paid certificate yet: on Mac use System Settings → Privacy & Security → Open Anyway; on Windows choose More info → Run anyway.",
@@ -26,7 +49,7 @@
         }
       }
     ],
-    "latest": "0.1.0"
+    "latest": "0.1.1"
   },
   "extensions": [
     {
@@ -433,5 +456,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-01T09:25:27.849Z"
+  "updatedAt": "2026-11-01T09:26:02.254Z"
 }
