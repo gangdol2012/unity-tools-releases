@@ -179,6 +179,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.23",
+          "date": "2026-11-01",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.23/unity-edit-tools-0.6.23.vsix",
+          "sha256": "a786bbffe59e298c2fe86ffe7d2ca02bfa191c26798fc5164ae292f59e716d12",
+          "size": 868298,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Placement options: Edit shows the ways a piece could be placed, and Codex chooses.** New Apply tool `unity_edit.placement_options` (the same as the toolkit command `options`).\n  - Before Codex receives a piece's generated image, the tool measures each placement against the design: Edit's own fit, the clearly visible part filling the planned box, and Codex's own mapping if it passes one. For each it gives the size as % of the planned box, the offset from the box's center and a match number. It also returns one picture with the design next to each option at the same scale.\n  - It receives and records nothing. Codex looks, picks, and receives with that option's mapping. Measurements can be wrong too, so the choice stays with the model.\n  - Why: in the 10-30 STARFALL Apply (Mac, 0.6.19), Edit's fit refused one HUD panel. Codex then placed all 12 UI pieces with its own quick math, which sized each whole generated image (faint haze included) into its box. The cards, the header, the badge and the HUD panels came out at 52–85% of their size, and the final review accepted the result. On those same images, the new pictures show the shrink at a glance. They also show that several redraws had a different shape (the cards lost their lower part), which no placement can fix.\n- **Codex's own placements get the same size note.** A `placement` mapping whose clearly visible part lands outside 0.6–1.3× of the planned footprint now carries the same `warnings` entry as `fit_group`. It is a not"
+        },
+        {
           "version": "0.6.22",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.22/unity-edit-tools-0.6.22.vsix",
@@ -456,5 +468,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-01T09:26:02.254Z"
+  "updatedAt": "2026-11-01T15:22:39.435Z"
 }
