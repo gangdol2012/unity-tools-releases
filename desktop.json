@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.1.0",
+  "latest": "0.1.1",
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-01",
+      "notes": "Edit: placement options from Unity Edit Tools 0.6.23. Before Codex receives a redrawn piece, Edit measures each way to place it against the design (its own fit, the visible part filling the planned box, and Codex's own numbers) and shows them side by side; Codex chooses. The bundled Edit package and project skill are 0.6.23. Fixes 0.1.0, whose placement_options tool answered with an error because its bundled toolkit lacked the options command. Not yet run in a live Apply.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.1.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "833909eb5ec8bd5aa5922e6ac76d1788e2ebc1d137a4d0b264f7cb6cf09a7149",
+          "size": 176821968,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "8547a7449a81d633e9d7833204d353c439e106552d783135aa6da7480d219990",
+          "size": 177534705,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "21dd271cfa5bbbab3fc7d49fe355361c33587df3f47a3cf41b867b0b733418f5",
+          "size": 165654948,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-01",
