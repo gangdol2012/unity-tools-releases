@@ -1,7 +1,32 @@
 {
   "schemaVersion": 1,
   "setup": {
-    "versions": []
+    "versions": [
+      {
+        "version": "0.1.0",
+        "date": "2026-11-01",
+        "notes": "First release of Unity Tools Setup. It installs VS Code, Node.js, Codex, Python, Git, Unity Hub and your project's Unity Editor; signs you in to Codex; installs, updates and removes the Unity Tools extensions (newest by default, or any published version); and checks that everything works, with a fix for each problem. The app isn't signed with a paid certificate yet: on Mac use System Settings → Privacy & Security → Open Anyway; on Windows choose More info → Run anyway.",
+        "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-setup-v0.1.0",
+        "downloads": {
+          "mac-arm64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.0/Unity-Tools-Setup-mac-arm64.dmg",
+            "sha256": "91d3c8cb7f1680307c46c533250a946f6dda817238c29cdc8d797d80a497af66",
+            "size": 129883602
+          },
+          "mac-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.0/Unity-Tools-Setup-mac-x64.dmg",
+            "sha256": "98f36e5bbf17a39f9f013eb9652116e3184c4e1378099eac0a13e4e571a05c6d",
+            "size": 136702612
+          },
+          "win-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.0/Unity-Tools-Setup-win-x64.exe",
+            "sha256": "2e668e526676865a0570fe98a2bc3bca1570dc9f30b9d17aa7267c0a07da4244",
+            "size": 120670616
+          }
+        }
+      }
+    ],
+    "latest": "0.1.0"
   },
   "extensions": [
     {
@@ -396,5 +421,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-01T03:59:47.250Z"
+  "updatedAt": "2026-11-01T04:30:03.616Z"
 }
