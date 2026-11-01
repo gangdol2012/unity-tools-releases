@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "latest": "0.1.0",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-01",
+      "notes": "First release of Unity Tools Desktop: your Unity projects with Play, Agent, Edit and Debug in one window, without VS Code. Add projects or create new ones, Unity Tools packages are installed and updated per project, Setup checks and fixes what the tools need, and the app updates itself. macOS: open the .dmg and drag the app to Applications (it isn't signed with a paid certificate yet: right-click → Open the first time). Windows: run the installer (SmartScreen may ask once).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.1.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "1e827a14fb7cad4ada40344edd17c8ad89ec1f47b26ef2a7de620a1d74ae6393",
+          "size": 176819014,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "d441f08146392da4e2c7df940007012a3507c5507ff1109fbf498a4a6ff23162",
+          "size": 177531754,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "c0472ceb91e0a5fcce5486f3572b6838ac82acfc5de4456b9795a59019423f5e",
+          "size": 165652421,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    }
+  ]
+}
