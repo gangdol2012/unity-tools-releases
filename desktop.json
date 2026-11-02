@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.2.4",
+  "latest": "0.3.0",
   "versions": [
+    {
+      "version": "0.3.0",
+      "date": "2026-11-02",
+      "notes": "Build (experimental): a new Build tab builds your game with any build profile (Unity 6 profiles or classic platforms), edits profiles (scenes, scripting defines, development build, platform settings; create, copy, rename, delete, activate), shows live progress and results (size, what takes the space, log, history), and answers Unity's questions before and during a build with the choices you set in Automatic answers. Turn it on per project in Overview › Tools in this project. Builds run in a background Unity when Unity is closed. Coming soon: install an APK on your phone through Unity Tools Connect. 한국어: the app now speaks Korean as well as English (Settings › General › Language). Menus, notifications and the app's screens are translated; the Agent chat panel and the Edit designer stay in English for now. Bundles Unity Build Tools' Unity package 0.1.0; other Unity packages unchanged.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.3.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "1a3838db47a064679d46d8fa668d9776e134e6b11b8b09389338f78da169dc26",
+          "size": 177263899,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "3f0b305c2c0cb9023e9993f5c6417ab163f2d82b4f65d1f568d9a4d3edbf2d6d",
+          "size": 177976612,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "b070c299f360bcb1f6a9da29136d75c239bb2e2f65b10b0dc805a10f79d15506",
+          "size": 165878343,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.3.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.2.4",
       "date": "2026-11-02",
