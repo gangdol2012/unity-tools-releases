@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.1.2",
+  "latest": "0.2.0",
   "versions": [
+    {
+      "version": "0.2.0",
+      "date": "2026-11-02",
+      "notes": "A new look for every screen. The tools work exactly as before; only how they look and where a few controls sit changed. The window has a full-height sidebar and one toolbar with the project, the tool tabs (Overview, Play, Agent, Edit, Debug, each with its own colour), Unity's state and Open in Unity. Press ⌘K (Ctrl+K) to jump to any project or tool or run a command. Overview shows Unity's state, script errors and a tile per tool. Play's Play/Pause/Step sit in the middle like Unity's toolbar. Agent has a calmer reading column, a timeline of tool calls, clearer approval cards and suggestions on an empty chat. Edit's designer panel is grouped into cards. Debug's script editor has line numbers and C# colours, and New Session opens a small dialog. Settings has a section list and theme previews. New icons, menus, dialogs, notifications and app icon; refined light and dark themes. The bundled Unity Tools packages are unchanged (Base 0.1.6, Play 0.1.11, Edit 0.6.23, Debug 0.1.4).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.2.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "d3cd9d43ec9c5cdd9469f90e127143e2c9de430f8a046336bdbd284d5450911e",
+          "size": 177116128,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "cbc01588e1a4cacc077c3d81eeb60c4072acfe5fd1ac4d72fb4c3584a9593c54",
+          "size": 177828846,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "4dbf2d9d87ad7c23bddce0386ed2b4aa237bf47c061c3d0185cafbd24ebcbc60",
+          "size": 165748368,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.1.2",
       "date": "2026-11-02",
