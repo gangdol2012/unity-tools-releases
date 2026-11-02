@@ -179,6 +179,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.24",
+          "date": "2026-11-02",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.24/unity-edit-tools-0.6.24.vsix",
+          "sha256": "dc9563e98ef553faad05b470f13f376e83a6e69e8db118e928a325d58eab3326",
+          "size": 871062,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Assembly is about 4× faster, and every file it writes is byte-identical.**\n  - Measured on the 11-02 pickup-icons Apply (Mac, 64 layers, 1174×1467): `assemble` went from 133 s to 33 s. All 727 files it writes (sprites, layers, contrast and removed views, hide/move/tint previews, review sheets) are the same bytes as before. Peak memory went down slightly (8.2 → 7.5 GB).\n  - In that live Apply, one `assemble` took about 6 minutes, because Unity and the sub-agents were running at the same time.\n- **What changed:**\n  - Colour conversion is no longer redone over the whole canvas:\n    - 8-bit images decode through a 256-entry table of the same formula;\n    - saving converts only the part that holds nonzero values;\n    - the comparison converts the source and the composite once, not once per measurement (67 times here);\n    - each contrast backdrop colour is converted once, and only the piece's visible box is blended.\n  - A removed-piece view or a hide/move/tint preview differs from the full composite only where its pieces were or moved to. Only that region is blended again, with the same blends in the same order, and spliced into the composite.\n  - Independent work runs on up to 6 threads: each layer's files, the removed views, the previews, the instance projections, the sprite export, and the reloads before the previews.\n- **Why:**\n  - In the 11-02 Mac run, toolkit Python was 53% of the time of the low-effort Applies, and one `assemble` took 3–6 minutes.\n  - About 40% of that "
+        },
+        {
           "version": "0.6.23",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.23/unity-edit-tools-0.6.23.vsix",
@@ -468,5 +480,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-01T15:22:39.435Z"
+  "updatedAt": "2026-11-02T12:57:52.122Z"
 }
