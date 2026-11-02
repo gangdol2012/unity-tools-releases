@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.1.1",
+  "latest": "0.1.2",
   "versions": [
+    {
+      "version": "0.1.2",
+      "date": "2026-11-02",
+      "notes": "UI fixes. Play: the View, Device and Zoom labels sit beside their menus again, so the rotate and pop-out buttons line up with them; the rotate buttons have proper icons; the \"Connecting\" box no longer repeats the sentence already shown in the empty view. Project page: the ··· menu button is visible, and in a narrow window the status line stays on one line. Edit: the empty page's New Design button has a normal + icon. A project whose folder is gone no longer shows \"Checking…\" forever. Opening a project no longer moves it up the project list under the pointer. The bundled Unity Tools packages are unchanged (Base 0.1.6, Play 0.1.11, Edit 0.6.23, Debug 0.1.4).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.1.2",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "8dc672bc4b5907914d1ceefb2cadc37de887ed3e7ee618a89d7f0762bdce43ae",
+          "size": 176822391,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "7b04c7dfccd1795237665edf5b9862665385fe1a07229d2d1b1b8bc824e26027",
+          "size": 177535127,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "23bf7ece93837b8ac9a5e863d4582f36a363a347b8ef82216f82f20b10c59ef0",
+          "size": 165655329,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.1.2/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.1.1",
       "date": "2026-11-01",
