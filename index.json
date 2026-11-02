@@ -443,6 +443,16 @@
       "name": "unity-connection-tools",
       "versions": [
         {
+          "version": "0.5.0",
+          "date": "2026-11-02",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-connection-tools-v0.5.0/unity-connection-tools-0.5.0.vsix",
+          "sha256": "4725924ddbca4049d949e3a71ddd981c2a2dfda751fc4a1024ffc75591e870d5",
+          "size": 94940,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Build requests.** With Unity Build Tools 0.2.0+ in the window (or Build turned on in Unity Tools Desktop), phones and\n  terminals can use Build: `build.status` (profiles, Automatic answers, the running build, history), `build.profile`,\n  `build.start`, `build.cancel`, `build.answer` (answer a Unity dialog the build is waiting on), `build.history`,\n  `build.report`, `build.log`, `build.unityLog`, `build.remove`, `build.settings` / `build.setSettings` (Automatic\n  answers), `build.resetAnswers`, and profile changes (`build.create`, `build.update`, `build.duplicate`,\n  `build.delete`, `build.activate`). `subscribe { build: true }` streams `build` events (`{ topic, payload }`: progress,\n  finished, log lines, profiles, settings, history).\n- **What stays on the computer:** where a build goes (always the profile's saved place), Finder/Explorer, the\n  Accessibility permission and Android keystore passwords. `build.sendToPhone` answers `COMING_SOON`.\n- **`unity-connect build`** in a terminal: list profiles and the last builds, build with a profile and follow it\n  (one line that updates in place; exit 0/1/4 for succeeded/failed/stopped), `stop`, `watch`, `history`,\n  `report <id|last>`. Unity's questions before a build are asked in an interactive terminal; scripts get exit code 3\n  and the `--answers '{…}'` to pass.\n- **Phone subscriptions add up.** The phone bridge used to remember only a window's last `subscribe`, so a screen\n  subscribing to one more thing could make a reloaded"
+        },
+        {
           "version": "0.4.2",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-connection-tools-v0.4.2/unity-connection-tools-0.4.2.vsix",
@@ -493,6 +503,18 @@
       "name": "unity-build-tools",
       "versions": [
         {
+          "version": "0.2.1",
+          "date": "2026-11-02",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-build-tools-v0.2.1/unity-build-tools-0.2.1.vsix",
+          "sha256": "f5cc4a1ec947a4215b72cd5c1f14d202ce20ecbf1ae9d08dcc0c59b960ee86f9",
+          "size": 275752,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- An Editor build now ends (as failed) when Unity quits, crashes or reloads in the middle of it, instead of showing\n  \"building\" forever.\n- If Unity can't start a build (for example it can't save the open scenes), it no longer stays \"busy\" and refuses\n  every later build.\n- After an Editor build, profiles are read from Unity again (they no longer stay in the offline view).\n- Build To… no longer changes where the profile builds to.\n- Pressing Build twice quickly starts one build, not two background Unitys.\n- Reset now also forgets the answers you saved for Unity's questions.\n- A build waiting through a script reload carries on even when Unity isn't the front window; an Android build\n  that lost its signing passwords in that reload says so instead of failing at signing.\n- The Unity package compiles on Unity versions without visionOS."
+        },
+        {
           "version": "0.1.0",
           "date": "2026-11-02",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-build-tools-v0.1.0/unity-build-tools-0.1.0.vsix",
@@ -518,5 +540,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-02T16:09:56.304Z"
+  "updatedAt": "2026-11-02T18:11:02.442Z"
 }
