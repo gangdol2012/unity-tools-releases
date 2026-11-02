@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.2.1",
+  "latest": "0.2.2",
   "versions": [
+    {
+      "version": "0.2.2",
+      "date": "2026-11-02",
+      "notes": "Bundles Unity Edit Tools 0.6.24: Apply's assembly step is about 4x faster (133 s to 33 s on a 64-layer design) with byte-identical output.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.2.2",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "2a068d3c0d89eef23af008db5588418edb8f51210ed443a385883e550e38083e",
+          "size": 177124422,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "013967eeb3c232997d39873245694d85a8dd8dc3f680d9a2a523baabff7ba478",
+          "size": 177837142,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "d5184c81b91adc58436d402a0393b3d1abe791a0d2eec4fbd41a79c54a4d8dea",
+          "size": 165756021,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.2/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.2.1",
       "date": "2026-11-02",
