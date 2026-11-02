@@ -57,6 +57,16 @@
       "name": "unity-tools-base",
       "versions": [
         {
+          "version": "0.4.3",
+          "date": "2026-11-02",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-base-v0.4.3/unity-tools-base-0.4.3.vsix",
+          "sha256": "8ebf31628f16f94cbccf1343ab571fa5f56ebb68edd8b2e029efd65eef778df8",
+          "size": 162730,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Knows Unity Build Tools (experimental).** Base installs, updates, repairs and removes Build's Unity package (`com.gangdol.unity-tools.build`) and its project guidance like the other tools, and lists it in Setup and Status after Debug. Nothing changes for projects without Unity Build Tools."
+        },
+        {
           "version": "0.4.2",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-base-v0.4.2/unity-tools-base-0.4.2.vsix",
@@ -477,8 +487,36 @@
         "gangdol.unity-play-tools"
       ],
       "recommended": false
+    },
+    {
+      "id": "gangdol.unity-build-tools",
+      "name": "unity-build-tools",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "date": "2026-11-02",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-build-tools-v0.1.0/unity-build-tools-0.1.0.vsix",
+          "sha256": "226bce7ae0db65b09e2c90ad7454a61a0e00f011323080998cd10bd7ca42a34a",
+          "size": 225221,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- First release. **Unity Tools: Open Unity Build** opens the Build view (the same one as Unity Tools Desktop).\n- Build with any build profile (Unity 6 profiles or classic platforms) in the open Editor, or in a background\n  Unity when the Editor is closed. Live stages, time left, warnings and errors.\n- Create, copy, rename, delete and activate profiles; edit scenes, scripting defines, development build and\n  platform settings.\n- Results: size on disk, what takes the space, largest assets, log; History of every build.\n- Automatic answers for Unity's questions before and during a build, set by you; unknown dialogs can be\n  answered from the panel and remembered.\n- The panel follows VS Code's display language (English or Korean).\n- Unity package `com.gangdol.unity-tools.build` 0.1.0 (Editor only), installed by Unity Tools Base 0.4.3+.\n- Coming soon: install an APK on your phone through Unity Tools Connect."
+        }
+      ],
+      "displayName": "Unity Build Tools",
+      "description": "Build your Unity game with any build profile, edit profiles, and let Unity's questions answer themselves while it builds. Live progress, size breakdown and build history. Experimental.",
+      "summary": "Experimental: build your game with any build profile, edit profiles, and let Unity's questions answer themselves while it builds.",
+      "order": 7,
+      "needs": [
+        "editor",
+        "unity"
+      ],
+      "worksWith": [],
+      "recommended": false
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-02T12:57:52.122Z"
+  "updatedAt": "2026-11-02T16:09:56.304Z"
 }
