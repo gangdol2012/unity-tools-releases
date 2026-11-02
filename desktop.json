@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.2.2",
+  "latest": "0.2.3",
   "versions": [
+    {
+      "version": "0.2.3",
+      "date": "2026-11-02",
+      "notes": "Agent: new rules for changes Codex can make without Edit, and size and position after Apply decided case by case by quality. Bundles Edit 0.6.25.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.2.3",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "80fdd97444802eec481c10b556d0cdf3b1fcc821eb8446cb86b87ed058329641",
+          "size": 177124901,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "6bcd70cccdd8a5daf35b71d73e776285d85fbb7028d5d9de6cb8f396ecdfc585",
+          "size": 177837599,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "1601d698f94511b37480e72629e17415465c5933cf9a27c080d9669d3e933682",
+          "size": 165756540,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.3/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.2.2",
       "date": "2026-11-02",
