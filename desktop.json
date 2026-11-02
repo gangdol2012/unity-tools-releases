@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.4.0",
+  "latest": "0.4.1",
   "versions": [
+    {
+      "version": "0.4.1",
+      "date": "2026-11-02",
+      "notes": "Build fixes from an independent review: a build that fails to start no longer leaves Unity busy; a build no longer shows building forever when Unity crashes, quits or reloads; profile details no longer show Unity as closed after a build; Build To… is one-off; two quick clicks start one build; Reset also clears taught answers; Build's Unity package compiles on Unity 2021.3/2022.3 again; a reload no longer silently drops Android signing passwords. Check for Updates finds a new release at once. Bundles Unity Build Tools' Unity package 0.2.1. Includes everything in 0.4.0.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.4.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "f665c36ccb8d5e2268dc13be4e1f1d063fb0a936cea5a2d4de79799f075c108c",
+          "size": 177346613,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "20ce612fd4b04613d167bed6f45b149ebbe9e69374329999ea9d2aa6e3bfc14f",
+          "size": 178059329,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "11e05e46d4ab2db9b96a29cc459a1e0c8e2abeff65c4be322ba87433da52c47d",
+          "size": 165954821,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.4.0",
       "date": "2026-11-02",
