@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.4.1",
+  "latest": "0.4.2",
   "versions": [
+    {
+      "version": "0.4.2",
+      "date": "2026-11-02",
+      "notes": "Add Existing Project works again (it failed every time). Windows: projects open in Unity are recognized; checking for running Unity is much faster. Setup: one failing check no longer breaks the page, results refresh after a fix, a failed fix keeps its reason on the row, Codex updates work with OpenAI's standalone Codex on Windows, more reliable Windows installers, Setup in Korean. Unity Hub projects are offered until added or turned down; + menu › Add from Unity Hub…",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.4.2",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "32d4491f1900cfc3c343fdf4e23d0ce2eaf31b1303a2bc5691b30e2cf488c25f",
+          "size": 177346737,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "bfb9987180363bdb6a41722f22564c5fc7244349737db2c6fbfbd2bbecc76630",
+          "size": 178059453,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "87619fedd9ba4f3e6ca586717652b0530651f9f14e7fd74cbbda94550639e9f3",
+          "size": 165955026,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.2/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.4.1",
       "date": "2026-11-02",
