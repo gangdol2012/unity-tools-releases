@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.2.0",
+  "latest": "0.2.1",
   "versions": [
+    {
+      "version": "0.2.1",
+      "date": "2026-11-02",
+      "notes": "Faster, steadier Agent chats. Past chats appear at once: the list is read from Codex's own chat index in a few milliseconds instead of asking Codex to scan every saved session (4-10 seconds on a long history), and it is kept between launches. Opening a chat is instant: each turn's message and answer show first, then what Codex did in the latest turn; older turns have a \"Show what Codex did\" row that loads on click. Large chats (Unity screenshots in tool results) no longer drop the Codex connection. Every chat request has a time limit and says what went wrong in the chat, picking chats quickly always shows the last one picked, chats keep their history after Codex stops unexpectedly, and a chat open in another Codex window (VS Code) says so. The bundled Unity Tools packages are unchanged (Base 0.1.6, Play 0.1.11, Edit 0.6.23, Debug 0.1.4).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.2.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "98b812c739abf2639c34239eac71ee35a533c5f788913bcd930e403e7a7342cf",
+          "size": 177122423,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "86a01f57d6b4bfc6ba5bce92a138f20fb3894d8167a3774678764dc6dd1a7f7d",
+          "size": 177835132,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "6eb7e3bd66dcf072f17d4fc9eb0592a5e4ca2ce013c8b3355d07fd301f78ceb9",
+          "size": 165754078,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.2.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.2.0",
       "date": "2026-11-02",
