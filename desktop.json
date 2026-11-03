@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.14.0",
+  "latest": "0.15.0",
   "versions": [
+    {
+      "version": "0.15.0",
+      "date": "2026-11-03",
+      "notes": "API providers, Experimental (Higher) (milestone IV, the hard cases): Ollama, LM Studio and other servers on this computer get up to 10 minutes before the first word (Codex waits 5); a server on this computer that isn't running is said before Edit's tasks too; Edit's Generate or Apply on a model that can't see images is said before the task. Every API provider is at Experimental (Higher). (Unity Tools Model 0.12.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.15.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "c715c64c507c690ab73a45925c8fe6ac077436e2e797d8400353231c898afd4a",
+          "size": 185943260,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "b097df1ef65191ce5a75b70c928ee3fce149fc3afd05ba12f6f659a4202149d2",
+          "size": 186655991,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "b4b9e319ed96a345939cf45ec13d6bb3d9ce33b9e35d2a7c184b8fc6c70699d1",
+          "size": 172619775,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.15.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.14.0",
       "date": "2026-11-03",
