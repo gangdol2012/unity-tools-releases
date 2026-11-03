@@ -189,6 +189,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.28",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.28/unity-edit-tools-0.6.28.vsix",
+          "sha256": "81404363f15ce76711b9657a89d7492c57505a87ff25768b445ca95bd91658d1",
+          "size": 879887,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Generate and Apply on Claude (Claude Code sign-in). Goes with Unity Tools Model 0.4.0.\n\n- **A set on Claude runs the task on Claude Code** with your own Claude plan: Edit starts Unity Tools Model's Claude\n  engine instead of `codex app-server` and everything else stays: the instructions, Edit's tools, the final answer,\n  progress, Stop, follow-ups, repair turns.\n- **Images come from OpenRouter** (Edit's own image tool), since Claude can't draw; Edit runs the same prepared-request\n  guard on them. A set on Claude whose images would come from Codex's image tool stops before any work and says what\n  to change.\n- Codex-only parts are skipped on Claude: the Codex lookup, code-cell yield, hook checks and `--config` flags. An empty\n  model or effort on Claude means Claude Code's own default, never Edit's Codex settings; effort can be Max.\n- Checked end to end with the real Claude Code against a stand-in Anthropic server (a Generate drawn by Edit's\n  OpenRouter tool and picked by Claude) and the Apply start with a stand-in app-server. Not yet run on a signed-in\n  Claude plan."
+        },
+        {
           "version": "0.6.27",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.27/unity-edit-tools-0.6.27.vsix",
@@ -396,6 +408,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.19",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.19/unity-agent-tools-0.2.19.vsix",
+          "sha256": "1e10f65b4eda5a0a85d4f2adf2f49235edb07033985ea6eab255201294ba3426",
+          "size": 18046235,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "For people on Claude alone. Goes with Unity Tools Model 0.4.0.\n\n- **Opening the panel starts what the next chat runs on**: the Claude engine when the default set is on Claude (so the\n  first message doesn't wait), Codex otherwise. Someone without Codex no longer sees \"Codex isn't installed\".\n- **@ file search in a chat on Claude** asks the Claude engine, so it works without Codex.\n- Edit tasks a chat on Claude starts run on Claude too (Edit 0.6.28)."
+        },
+        {
           "version": "0.2.18",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.18/unity-agent-tools-0.2.18.vsix",
@@ -597,6 +619,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.4.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.4.0/unity-tools-model-0.4.0.vsix",
+          "sha256": "0cede8f15a324cfe217666f0d85acadd6feba73c2e828b55e6dfb7a1e81e9c74",
+          "size": 4717307,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Edit's Generate and Apply on your Claude plan too. Goes with Edit 0.6.28 and Agent 0.2.19; Unity Tools Desktop 0.7.0 has\nthe same.\n\n- **Claude for every part of a set**: Agent chats, Edit · Generate and Edit · Apply to Unity. Claude Code can't draw, so\n  Edit's parts on Claude take their images from OpenRouter (Edit's own image tool): switching a part to Claude picks\n  your OpenRouter provider when there is one, and the page says so when images would come from Codex's image tool.\n  Switching to or from Claude clears a model name that only the other side knows.\n- **Edit runs on the engine like Agent**: nothing ever asks, as with Codex. Generate's commands stay in Claude Code's\n  sandbox with no way out and it can change files only in its run folder; Apply has full access, as on Codex.\n- **The project's Unity Tools skills** (`.agents/skills`, which Codex reads) reach Claude too, as the \"unity-tools\"\n  plugin.\n- **@ file search** in a Claude chat answers from the engine, so it works without Codex: file names first, the project's\n  `.gitignore` and Unity's generated folders left out.\n- The release stage note shows once per set.\n- Checked with the real Claude Code against a stand-in Anthropic server, including a full Generate through Edit's own\n  OpenRouter tool. Not yet run on a signed-in Claude plan."
+        },
+        {
           "version": "0.3.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.3.0/unity-tools-model-0.3.0.vsix",
@@ -643,5 +675,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T16:12:12.319Z"
+  "updatedAt": "2026-11-03T16:33:56.490Z"
 }
