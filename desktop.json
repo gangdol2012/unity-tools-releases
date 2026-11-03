@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.6.0",
+  "latest": "0.7.0",
   "versions": [
+    {
+      "version": "0.7.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Canary: Edit's Generate and Apply on your Claude plan too, and Agent for people on Claude alone. Pick Claude for any part of a set in Settings → Model Sets; Edit's parts on Claude draw their images with OpenRouter (Claude can't draw), and switching a part to Claude picks your OpenRouter provider. A project on a Claude set starts Claude, not Codex; @ file search and the project's Unity Tools skills work on Claude. (Unity Tools Model 0.4.0, Agent 0.2.19, Edit 0.6.28.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.7.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "72c0d927b408d86dba8c95ebedf608fae388ba4956d2441940446a228782ec5f",
+          "size": 185922104,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "137e339fef046c767690627674e33681429b834683978abd1ac88fae609f6213",
+          "size": 186634834,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "7f97dc4d0703ea4e6cad1af7f6b124b9e53eec582f6f3bf9d92df28165649c97",
+          "size": 172599653,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.7.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.6.0",
       "date": "2026-11-03",
