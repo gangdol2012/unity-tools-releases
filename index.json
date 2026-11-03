@@ -396,6 +396,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.18",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.18/unity-agent-tools-0.2.18.vsix",
+          "sha256": "1cf210d682e93b36a5008de0fc3398eb18aaf683e16e52b6f43340527819a805",
+          "size": 18045837,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Chats on Claude (Claude Code sign-in). Goes with Unity Tools Model 0.3.0.\n\n- **A set on Claude runs the chat on Claude Code** with your own Claude plan: Agent starts Unity Tools Model's Claude\n  engine for it instead of Codex, and everything else stays as it is — the Unity tools, captures under their steps,\n  approvals, Stop, sending while it works, subagents, the chat list, reopening a chat.\n- Codex isn't started for a chat on Claude, and Codex's warnings don't show over it. A chat keeps its engine: picking a\n  single model by hand lists Claude's models in a chat on Claude.\n- Chats say who's working: \"Claude wants to run a command\", \"Ask Claude anything…\", \"Show what Claude did\", and so on.\n- Without Unity Tools Model 0.3.0, or with sets on other providers, nothing changes.\n- Checked end to end with the real Claude Code against a stand-in Anthropic server, from VS Code's own runtime. Not yet\n  run on a signed-in Claude plan."
+        },
+        {
           "version": "0.2.17",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.17/unity-agent-tools-0.2.17.vsix",
@@ -587,6 +597,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.3.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.3.0/unity-tools-model-0.3.0.vsix",
+          "sha256": "42a917899356e2cda522fe3789ee6f00220fd0924780867f3f42af78a8adb651",
+          "size": 4713128,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Agent chats on your own Claude plan. Goes with Agent 0.2.18; Unity Tools Desktop 0.6.0 has the same.\n\n- **Claude (Claude Code sign-in)**, built in next to ChatGPT (Codex sign-in): no key; it runs on Claude Code on this\n  computer, signed in with your own Claude account. Pick it for a set's Agent part.\n- **The Claude engine**: a small program Agent starts in place of `codex app-server` for those chats. It answers in\n  Codex's own protocol and runs the installed, unmodified `claude` through Anthropic's Claude Agent SDK:\n  - text and thinking stream; Unity tools run through Agent with Claude's tool-call ids (captures attach to the right\n    step); file changes show their diffs; plans, token use and the context bar update;\n  - Stop ends a turn within moments; a message sent while it works joins the running turn; a chat continues after a\n    restart with its tools and instructions;\n  - **Project** permission = Claude Code's accept-edits mode with its sandbox (commands in the project run without\n    asking), **Read only** asks first, **Full access** never asks; \"Allow for this chat\" is remembered;\n  - long Unity waits don't time out or move to the background; Claude Code tools Agent has no use for (scheduling,\n    worktrees, plan mode, its own questions) are left out of every request;\n  - model names `opus`, `sonnet`, `haiku`, `fable` or full ids; empty means Claude Code's default; effort up to Max.\n  - Its sign-in and install problems read in plain words.\n- The set page shows Clau"
+        },
+        {
           "version": "0.2.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.2.0/unity-tools-model-0.2.0.vsix",
@@ -623,5 +643,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T14:49:05.870Z"
+  "updatedAt": "2026-11-03T16:12:12.319Z"
 }
