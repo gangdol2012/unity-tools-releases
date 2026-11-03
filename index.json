@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.32",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.32/unity-edit-tools-0.6.32.vsix",
+          "sha256": "384ea0e57c69823daa60b9b956ea50586a0ec30ebde18b207813a59e98a4aced",
+          "size": 883202,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **A task that fails on a model set's API provider says what to check**, naming the provider: its API key, its\n  credits, the model name, a rate limit, its servers, or a server on this computer that isn't running. It showed\n  Codex's raw message with an HTTP status and address before. Goes with Unity Tools Model 0.9.0."
+        },
+        {
           "version": "0.6.31",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.31/unity-edit-tools-0.6.31.vsix",
@@ -467,6 +479,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.21",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.21/unity-agent-tools-0.2.21.vsix",
+          "sha256": "c66dbd7530d1a7782d5d69513c330673a9ead5d097db9e519a1dfc665f442854",
+          "size": 18048540,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "For chats on a model set's API provider (OpenRouter, DeepSeek, Ollama …). Goes with Unity Tools Model 0.9.0.\n\n- **Failures name the provider and what to check**: a key it didn't accept, credits that ran out, a model it doesn't\n  offer, a rate limit, its servers having trouble, or a server on this computer that can't be reached. A bad key or an\n  unknown model said \"Codex lost its internet connection\" before, and a server error \"OpenAI's servers are busy\".\n  ChatGPT chats keep their wording (a sign-in or usage limit Codex reports with a status no longer reads as a lost\n  connection either).\n- **Ollama or LM Studio not running** is said before the turn starts, instead of Codex reconnecting for minutes.\n- A failure is said once (Codex reports it as an error and again as the turn's end), and \"Connection hiccup\" once while\n  Codex keeps retrying."
+        },
+        {
           "version": "0.2.20",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.20/unity-agent-tools-0.2.20.vsix",
@@ -688,6 +710,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.9.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.9.0/unity-tools-model-0.9.0.vsix",
+          "sha256": "b09bf0e4176a8867079cbd71df669830800458bfe962ee4170cdce9411e8b240",
+          "size": 4726824,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "The other providers (OpenAI API, Anthropic API, DeepSeek API, OpenRouter, Ollama, LM Studio, Other) now go through the\nsame milestones as Claude did; this is milestone I (Canary) for all of them, shown beside each provider in Model Sets.\nGoes with Agent 0.2.21 and Edit 0.6.32; Unity Tools Desktop 0.12.0 has the same.\n\n- **About 87k fewer tokens on every request**: Codex sends your ChatGPT connectors (GitHub, Gmail, Railway …) to the\n  model with each request as tool definitions, about 348k characters for a model it doesn't know. Runs on an API\n  provider now leave them out (`features.apps=false`): cheaper and faster on paid APIs, and a model on this computer\n  with a small context window can take the request at all. Runs on ChatGPT keep them.\n- Edit 0.6.31 (already out) made Generate and Apply finish on these providers: Codex gives their messages no phase, so\n  Edit never took their final answer.\n- Failures name the provider and what to check (see Agent 0.2.21 and Edit 0.6.32)."
+        },
+        {
           "version": "0.8.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.8.0/unity-tools-model-0.8.0.vsix",
@@ -784,5 +816,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T18:02:05.264Z"
+  "updatedAt": "2026-11-03T18:16:38.262Z"
 }
