@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.13.0",
+  "latest": "0.14.0",
   "versions": [
+    {
+      "version": "0.14.0",
+      "date": "2026-11-03",
+      "notes": "API providers, Experimental (Lower) (milestone III, spending): Claude models on OpenRouter are now cached (OpenRouter goes through the model bridge, which asks for it; Codex never did), so long chats no longer pay for the whole conversation at every step. A model OpenRouter lists as text-only gets a short note in place of each image instead of the request failing. Settings → Model Sets suggests the models your OpenRouter key can use. (Unity Tools Model 0.11.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.14.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "65f7686425c8f1649d97f3e367e4a1a5da45801c03800514c895f3ad5b292920",
+          "size": 185942284,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "21c3e37bfe156e028e96c44866965842132f71e75edcca1a141991eed2c9d03c",
+          "size": 186655005,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "673e53783a1bf5ba26608357bbf1ea3516926f7149f9dc42b6a1c1cc5414fde6",
+          "size": 172618819,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.14.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.13.0",
       "date": "2026-11-03",
