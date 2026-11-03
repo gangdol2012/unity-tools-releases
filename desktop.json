@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.5.1",
+  "latest": "0.6.0",
   "versions": [
+    {
+      "version": "0.6.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Initial: Agent chats on your own Claude plan. Pick Claude for a set's Agent part in Settings → Model Sets; the chat then runs on Claude Code on this computer, signed in with your Claude account, instead of Codex, with the same Unity tools, approvals, Stop, subagents and chat list. No key needed. Edit's Generate and Apply on Claude follow in a later release. (Unity Tools Model 0.3.0, Agent 0.2.18.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.6.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "3981927017435172f88efba5278a2a5ad2fd2c29e53f2f8db776d312c17945df",
+          "size": 185916491,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "d02e23d61486980b73fbdd68b070e356a0ec331d54fc39a4b117fb1bf851c300",
+          "size": 186629212,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "0e875f3a6cf630483271578dbce0fea19b676028c75343ebeb5336cf5c39dae9",
+          "size": 172594770,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.6.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.5.1",
       "date": "2026-11-03",
