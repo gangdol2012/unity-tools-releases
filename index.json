@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.30",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.30/unity-edit-tools-0.6.30.vsix",
+          "sha256": "6058a3654f4b3388dfae443c2eec38e689dccffec46b85d26f7b82922f40fecf",
+          "size": 880502,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **An empty effort on Claude means low**, as on Codex since 0.6.26, so a Generate or Apply on Claude (Claude Code\n  sign-in) doesn't spend at Claude Code's own default effort (often extra high). Goes with Unity Tools Model 0.6.0."
+        },
+        {
           "version": "0.6.29",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.29/unity-edit-tools-0.6.29.vsix",
@@ -654,6 +666,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.6.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.6.0/unity-tools-model-0.6.0.vsix",
+          "sha256": "64898451ff0194f97a0b33b8cf8d62f7acd1441687fef4249659f2c2bb05aee2",
+          "size": 4719457,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Your Claude plan's usage, spent as carefully as Codex spends ChatGPT's. Goes with Edit 0.6.30; Unity Tools Desktop\n0.9.0 has the same.\n\n- **Unity's tools load with the chat**, as on Codex: no tool-search step before the first Unity action (they are\n  about 12k tokens; Claude Code still defers them if your own MCP tools grow past a tenth of the context window).\n- **A long chat is compacted at about 245k tokens**, as Codex does with bridged models, so a model with a million-token\n  window doesn't re-read up to that on every step. The context bar measures against that window.\n- **A new model or effort for the next message applies in the running session**, without restarting Claude Code;\n  on Opus and Sonnet 5.5 the prompt cache survives an effort change.\n- Long Unity waits (and OpenRouter images) aren't cut off by Claude Code's MCP idle limit.\n- Chats take the title Claude Code gives them, when it gives one; a name you set shows in Claude Code too.\n- Jupyter notebook editing is left out of Unity chats (Codex has none either).\n- Edit's parts on Claude read **Default (low)** for an empty effort: Edit runs them at low, as on Codex.\n- On a Claude plan, chats already get Claude Code's one-hour prompt cache, so Unity waits past five minutes don't\n  re-read the chat.\n- Release stage: Experimental (Lower)."
+        },
+        {
           "version": "0.5.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.5.0/unity-tools-model-0.5.0.vsix",
@@ -720,5 +742,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T16:50:18.063Z"
+  "updatedAt": "2026-11-03T17:03:12.575Z"
 }
