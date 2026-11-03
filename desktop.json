@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.4.2",
+  "latest": "0.4.4",
   "versions": [
+    {
+      "version": "0.4.4",
+      "date": "2026-11-03",
+      "notes": "Less Codex usage: Generate and Apply to Unity use gpt-5.6-sol · low when their model is empty (before, whatever ~/.codex/config.toml named; gpt-6-astra on the Windows PC), and long waits take one model step on Codex 0.160+ (Edit 0.6.26, Agent 0.2.16). Also includes 0.4.3: phones can open links in Agent chats.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.4.4",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "a57c965d18b644ee8e0c0c177c31409bc053c8b95b0bf970fdbcd58d7e9a8b2b",
+          "size": 177359543,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "6bcc638b850e57cb576c622f476f893e27f70733ecf128d671d79842e50f9172",
+          "size": 178072262,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "0e95fd1bec8a75b265327a77c5cc64b3213cf23f3f6e89e0665eb8d7bae29dee",
+          "size": 165967157,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.4.4/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.4.2",
       "date": "2026-11-02",
