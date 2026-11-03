@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.12.0",
+  "latest": "0.13.0",
   "versions": [
+    {
+      "version": "0.13.0",
+      "date": "2026-11-03",
+      "notes": "API providers, Preview (milestone II): each API provider model's real context window (OpenRouter's list, LM Studio and Ollama on this computer, an Other server's list) goes to Codex, so long chats compact before the model's limit instead of failing at it; a model with too little room for Unity Tools (under 16,384 tokens) is said before the run; the Ollama and LM Studio cards say how much context they need. Every API provider is at Preview. (Unity Tools Model 0.10.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.13.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "9e3f74acdf0a2da37e91e8361144b8b43573869926cb2294578f087e1dac70cd",
+          "size": 185939642,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "cabca506088bfcc488cf639f88d93e085c1b70799eabe34d28d3cb444a6a444e",
+          "size": 186652388,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "46d45bed4533c12d5c59765d2a35205b390e111abebe76e46f7224ff37e253a7",
+          "size": 172616519,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.13.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.12.0",
       "date": "2026-11-03",
