@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.10.0",
+  "latest": "0.11.0",
   "versions": [
+    {
+      "version": "0.11.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Done (milestone V): Claude matches Codex in what it can do, how it spends your plan and how it recovers. Checked on a real signed-in Claude plan: a chat with a Unity tool, Stop, and an Edit-style answer. Stop before any reply and then quitting no longer leaves a chat unable to continue; a message sent as Claude finishes is answered in that turn; Stop always ends the turn; Settings → Model Sets no longer marks Claude as an early release. (Unity Tools Model 0.8.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.11.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "6ec93d77566cc1c801e933f168ad1096f2eaa650e7e275b6d9ddd355117377ae",
+          "size": 185932690,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "61932fd5621403f8e2188f8523b3b6cf63ca3ce7daf402e65280c2d7a0e60ab7",
+          "size": 186645417,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "60bde75f3439c7736e1b4105ec56b44880aad8b0f5365c079d1a10e303879ec4",
+          "size": 172610146,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.11.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.10.0",
       "date": "2026-11-03",
