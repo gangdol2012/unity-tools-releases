@@ -3,6 +3,29 @@
   "setup": {
     "versions": [
       {
+        "version": "0.1.2",
+        "date": "2026-11-03",
+        "notes": "Claude Code for Claude (Claude Code sign-in): with Unity Tools Model selected, Setup installs Claude Code with Anthropic's own installer (no administrator password), updates it the way it was installed, and opens its sign-in in the browser. Both rows are optional: only people who pick Claude in Unity Tools Model need them.",
+        "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-setup-v0.1.2",
+        "downloads": {
+          "mac-arm64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.2/Unity-Tools-Setup-mac-arm64.dmg",
+            "sha256": "d6c843bc05ff52e82cc8ea51fc5e4c973773e1f9e373e9a6a992c97f70562f05",
+            "size": 129871175
+          },
+          "mac-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.2/Unity-Tools-Setup-mac-x64.dmg",
+            "sha256": "86909e3b7138613123dfc11b4aca4cc366a8ac2ba0a9cb684c8da0297db4337c",
+            "size": 136683259
+          },
+          "win-x64": {
+            "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-setup-v0.1.2/Unity-Tools-Setup-win-x64.exe",
+            "sha256": "de3d6f944dbaf2f7cfbb7b120bd13653b86c2f3a0cddd5a169ff345b5b068c53",
+            "size": 120674370
+          }
+        }
+      },
+      {
         "version": "0.1.1",
         "date": "2026-11-01",
         "notes": "Codex now has to be 0.160.0 or newer, the first version that can make images with transparent backgrounds, which Unity Edit Tools needs to cut a design into pieces. New checks: which Codex Unity Edit Tools' Apply to Unity will really run (found with Edit's own code) and whether it can make transparent images; and the Codex Edit uses for Generate, which Setup now downloads ahead. On Windows, Codex installed with npm needs Unity Edit Tools 0.6.22 or newer.",
@@ -49,7 +72,7 @@
         }
       }
     ],
-    "latest": "0.1.1"
+    "latest": "0.1.2"
   },
   "extensions": [
     {
@@ -697,5 +720,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T16:49:46.715Z"
+  "updatedAt": "2026-11-03T16:50:18.063Z"
 }
