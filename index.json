@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.33",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.33/unity-edit-tools-0.6.33.vsix",
+          "sha256": "303a9a9a85829f31af3b2d26aeb1527df4ff28e95046fb05785bba746f1279c9",
+          "size": 883686,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- A failure on an OpenRouter 404 that isn't about the model's name (no endpoint with tool use, a data policy) keeps\n  OpenRouter's own words; \"on this computer\" only for an address on it. A model that stopped before its answer three\n  times says \"pick a stronger model\" (it also reaches people without Model Sets). Goes with Unity Tools Model 0.13.0."
+        },
+        {
           "version": "0.6.32",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.32/unity-edit-tools-0.6.32.vsix",
@@ -479,6 +491,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.22",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.22/unity-agent-tools-0.2.22.vsix",
+          "sha256": "adcadb3821b03a0e79c82654a4f8b326218d72225335df02834bb637ce7eefb5",
+          "size": 18049012,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Tools Model 0.13.0.\n\n- A chat on Ollama or LM Studio at its own address checks that address before a turn (it checked the default one, and\n  refused every message when nothing listened there); a chat saved earlier takes the set's address when reopened.\n- An OpenRouter 404 that isn't about the model's name (no endpoint with tool use, a data policy) keeps OpenRouter's\n  own words; \"on this computer\" only for an address on it."
+        },
+        {
           "version": "0.2.21",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.21/unity-agent-tools-0.2.21.vsix",
@@ -710,6 +732,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.13.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.13.0/unity-tools-model-0.13.0.vsix",
+          "sha256": "bf2618f040ad6cdc28e67f0794ea3219992221e549aed2a98684c1ea022d9b0c",
+          "size": 4735622,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Milestone V for the API providers: an independent review of everything since 0.9.0, its findings fixed. Every API\nprovider now runs as well through Codex as ChatGPT does in what works, how it spends and how it recovers, so the stage\nbadges are gone, as for Claude. Goes with Agent 0.2.22 and Edit 0.6.33; Unity Tools Desktop 0.16.0 has the same.\nChecked with the real Codex against stand-ins of each provider; not yet run with a real API key.\n\n- A run tells Agent the address it runs at, so a chat on Ollama or LM Studio at its own address (another port, another\n  computer) is no longer refused as \"not running\" when nothing listens at the default one.\n- An OpenRouter stream cut short ends Codex's connection at once, so it retries, instead of the turn looking stuck for\n  10 minutes.\n- A model refused for too small a context window counts again as soon as it is raised (servers on this computer are\n  asked every time; a small window from an \"Other\" server isn't kept).\n- Ollama: a model named without a tag matches its loaded `name:latest`, and a model that isn't loaded counts only a\n  context it was made with (not the most it could take, which Ollama doesn't use by default).\n- A bare Ollama or LM Studio address (`http://localhost:11434`) gets its `/v1`."
+        },
+        {
           "version": "0.12.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.12.0/unity-tools-model-0.12.0.vsix",
@@ -846,5 +878,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T18:47:30.995Z"
+  "updatedAt": "2026-11-03T19:03:12.424Z"
 }
