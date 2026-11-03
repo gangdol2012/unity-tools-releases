@@ -710,6 +710,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.10.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.10.0/unity-tools-model-0.10.0.vsix",
+          "sha256": "65b02a1cec7d66a9885179c08f73e15b634f299525e1a75a5c98c6079028508d",
+          "size": 4730444,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Milestone II for the API providers. Unity Tools Desktop 0.13.0 has the same.\n\n- **Each model's real context window**: Codex assumes 258k tokens for any model it doesn't know. Unity Tools Model now\n  asks where the model runs (OpenRouter's public model list, LM Studio's loaded context, Ollama's running or built-in\n  context, an \"Other\" server's model list) and tells Codex, so a long chat compacts before the model's limit instead\n  of failing at it (at the same point as ChatGPT models for big windows). Nothing answers in time → Codex's own\n  assumption, as before.\n- **A model with too little room is said up front**: a window under 16,384 tokens can't take a single request of\n  Codex's instructions and Unity's tools, so the run is refused with what to change (Ollama's default is often 4,096).\n  The Ollama and LM Studio cards say how much they need (32k or more).\n- Checked end to end with the real Codex against stand-in providers: an Agent chat with a Unity tool on OpenRouter,\n  LM Studio and Other, and Edit's Generate on an API model that gives no message phases and stops before its answer.\n- Release stage of every API provider: Preview."
+        },
+        {
           "version": "0.9.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.9.0/unity-tools-model-0.9.0.vsix",
@@ -816,5 +826,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T18:16:38.262Z"
+  "updatedAt": "2026-11-03T18:28:37.457Z"
 }
