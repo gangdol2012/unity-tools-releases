@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.5.0",
+  "latest": "0.5.1",
   "versions": [
+    {
+      "version": "0.5.1",
+      "date": "2026-11-03",
+      "notes": "Claude and DeepSeek in model sets: add the Anthropic API or DeepSeek API under Settings → Model Sets → Providers and Keys, then pick Claude or DeepSeek models per Agent chat or Edit task. Codex only speaks OpenAI's Responses API, so the app translates for them on this computer; the key never reaches Codex. Addresses are built in and model names suggested. (Unity Tools Model 0.2.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.5.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "39ac49dfb4765b45da9dc456eaa18e1b7c9d9b2c03eecd6e02bef59364546c20",
+          "size": 180797714,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "2fde9ccb0bc711af401520492e6623bf1f4c8076f18cd338abc585d0dc1c9972",
+          "size": 181510429,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "78055f766d5d468ec58bc09040c44bcf827aacaa479d5dae171e2e12d45f04b5",
+          "size": 168533383,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.5.0",
       "date": "2026-11-03",
