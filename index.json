@@ -710,6 +710,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.12.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.12.0/unity-tools-model-0.12.0.vsix",
+          "sha256": "83ad833829848fcb6571bae780b9e7630fbc9047040ca7320423f0f2fa7310ba",
+          "size": 4734648,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Milestone IV for the API providers: the hard cases. Unity Tools Desktop 0.15.0 has the same.\n\n- **A model on this computer may take its time**: Ollama and LM Studio (and an \"Other\" address on this computer) get\n  up to 10 minutes before the first word, where Codex stops waiting after 5; a large prompt on a CPU can take that\n  long. They run at their usual address as Unity Tools' own provider (Codex doesn't let its built-in ones wait longer).\n- **A server on this computer that isn't running is said before the run**, for Edit's Generate and Apply too (Agent\n  0.2.21 already checked before each chat turn), instead of Codex reconnecting for minutes.\n- **Edit on a model that can't see images is said before the task**: Edit works from images, so a Generate or Apply on\n  a model OpenRouter lists as text-only is refused with what to pick instead. Agent chats on it go on, with a note in\n  place of each image.\n- Release stage of every API provider: Experimental (Higher)."
+        },
+        {
           "version": "0.11.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.11.0/unity-tools-model-0.11.0.vsix",
@@ -836,5 +846,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T18:39:13.049Z"
+  "updatedAt": "2026-11-03T18:47:30.995Z"
 }
