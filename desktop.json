@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.4.4",
+  "latest": "0.5.0",
   "versions": [
+    {
+      "version": "0.5.0",
+      "date": "2026-11-03",
+      "notes": "Model sets: name a choice of provider, model and effort for Agent chats, Edit's Generate and Edit's Apply to Unity (Settings → Model Sets), then pick a set per Agent chat and per Edit task. A chat's subagents and the Edit tasks it starts use its set. Providers: ChatGPT sign-in, OpenAI API, OpenRouter, Ollama, LM Studio, or any Responses API address; keys stay in this computer's keychain. The starter set, Standard, works as before. (Edit 0.6.27, Agent 0.2.17, Unity Tools Model 0.1.0.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.5.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "ed8398f341e3ed5204cbba9f157bd87d5e340710343c93033c9e55c5333c9a3d",
+          "size": 177380573,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "fc01e3a2a6c6a84e9bddf3d25b98639dbd1cfdd1247b35cabbc31f8561fa859a",
+          "size": 178093308,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "d715f283c02e040f1b482dd1b4a6167634fc5a0549f9daa5b8117435853c0044",
+          "size": 165986248,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.5.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.4.4",
       "date": "2026-11-03",
