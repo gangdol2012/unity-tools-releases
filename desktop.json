@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.9.0",
+  "latest": "0.10.0",
   "versions": [
+    {
+      "version": "0.10.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Experimental (Higher): the hard cases. One window at a time per chat; Stop while an approval waits ends the turn; a message sent as Claude finishes is answered in that turn, and Stop with messages waiting never lets them run unseen; commands run where Claude Code has no sandbox (Windows, Linux without bubblewrap) instead of failing to start; 'Allow for this chat' stays in the chat; idle chats close their Claude Code after 10 minutes; a chat file that can't be written no longer ends every chat; plan limits with their reset time, an expired sign-in and a too-long conversation in plain words. Edit 0.6.31: Generate and Apply on DeepSeek, OpenRouter and other API model sets can finish (Codex gives those models no message phases, so their answer was never taken), a model that stops before its answer is asked to carry on, and Edit's own lines name the set's model instead of Codex. (Unity Tools Model 0.7.0, Agent 0.2.20, Edit 0.6.31.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.10.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "507500239bf162bf3ec45921c5e64625968c145f90b4ed086b2bc1666b904cfe",
+          "size": 185932217,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "bbd0681b3f3871e2e83b15889d51da83ae130e0b6463c77f94d4d46a059e5ee9",
+          "size": 186644950,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "6ad8b38e832c338e8cb068a2dc12a815f00735052a7b4a54c38abedb85e2a9a1",
+          "size": 172609663,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.10.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.9.0",
       "date": "2026-11-03",
