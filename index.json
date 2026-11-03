@@ -688,6 +688,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.8.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.8.0/unity-tools-model-0.8.0.vsix",
+          "sha256": "5fa0ca46595be585285797718010ebc08e879da08f4571c32a384b011b7cf6bc",
+          "size": 4725953,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Milestone V: Claude matches Codex in what it can do, how it spends your plan and how it recovers. Unity Tools Desktop\n0.11.0 has the same.\n\n- **Release stage: Done.** The early-release badge and note are gone from Model Sets, as for ChatGPT.\n- **Checked on a real Claude plan** (signed in on macOS): an Agent chat calling a Unity tool, Stop mid-answer and an\n  Edit-style answer in Edit's format, each in a few seconds; later turns read your conversation from Claude's 1-hour\n  prompt cache. Not yet run on Windows.\n- **Stop before any reply, then closing the window**: the chat continues the same conversation afterwards (Claude Code\n  had already saved it, and starting it anew was refused).\n- **A message sent while Claude writes its last answer** is answered in that same turn; this now follows the message\n  ids Claude Code reports (Claude Code 2.1.296 doesn't count such a message as waiting).\n- **Stop always ends the turn**, also when Claude Code doesn't answer the Stop itself (after 15 seconds).\n- When Claude Code exits right after a failure (a sign-in or billing problem), the chat says that failure instead of\n  \"stopped unexpectedly\"."
+        },
+        {
           "version": "0.7.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.7.0/unity-tools-model-0.7.0.vsix",
@@ -774,5 +784,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T17:45:26.749Z"
+  "updatedAt": "2026-11-03T18:02:05.264Z"
 }
