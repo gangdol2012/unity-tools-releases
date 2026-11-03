@@ -189,6 +189,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.27",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.27/unity-edit-tools-0.6.27.vsix",
+          "sha256": "5f35c00e0914d6aade56199d90f98b8e04a519eb62293d9e0da6cf82037ac7a6",
+          "size": 877893,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Model sets: pick the provider, model and effort for each Generate and each Apply. Goes with Unity Tools Model 0.1.0 and Agent 0.2.17.\n\n- **A Model set list above Generate & Apply and in the Apply to Unity step**, when Unity Tools Model is installed. Each task starts on the default set; the choice applies to that task only. A continued Apply keeps its set. **Manage model sets…** at the end of the list opens Unity Tools Model at the chosen set.\n- **A set can run on another provider** (OpenAI API, OpenRouter, Ollama, LM Studio, any Responses API address): its settings reach Codex as `--config` arguments after Edit's own, and its key only as an environment variable of that Codex process.\n- **A set can choose where images come from**: Edit's image setting, Codex's image tool, or OpenRouter with the set's own key and image model.\n- **Edit tasks an Agent chat starts use the chat's set** (the `modelSet` task option). A model the agent names itself still wins.\n- Without Unity Tools Model nothing changes: no list, Edit's own settings. Tasks from an older Agent, which names no set, use Edit's own settings too.\n- Not yet run with a live model call."
+        },
+        {
           "version": "0.6.26",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.26/unity-edit-tools-0.6.26.vsix",
@@ -384,6 +396,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.17",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.17/unity-agent-tools-0.2.17.vsix",
+          "sha256": "acc452468e33dd83274439967213857bc681f0827789dccb44b27a2321067a89",
+          "size": 18043284,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Model sets per chat. Goes with Unity Tools Model 0.1.0 and Edit 0.6.27.\n\n- **The model button lists Unity Tools Model's sets** when it's installed: each set with what its Agent part runs, a\n  check on the chat's set, **Manage model sets…**, and the single models under \"This chat only\".\n- **A set applies to its chat only.** A new chat starts on the default set; another chat's choice doesn't change it.\n  Reopening a chat restores its set.\n- **Subagents and Edit tasks follow the chat's set**: a subagent starts on its parent's set, and `start_task`,\n  `create_design` and `apply_reusable` pass the set to Edit (Edit 0.6.27 or newer uses it; older Edit ignores it).\n- **A set on another provider** (OpenAI API, OpenRouter, Ollama, LM Studio, any Responses API address) reaches Codex as\n  thread settings; its key only as an environment variable of the Codex process. A started chat keeps its provider, so\n  sets on another provider show as unavailable in it, with the reason.\n- **A key saved after Codex started**: Codex restarts with it when no chat is running; otherwise the chat says to send\n  again when the running chats finish.\n- Picking a single model by hand leaves the set for that chat. Without Unity Tools Model nothing changes.\n- Not yet run in a live chat."
+        },
+        {
           "version": "0.2.16",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.16/unity-agent-tools-0.2.16.vsix",
@@ -559,8 +581,37 @@
       ],
       "worksWith": [],
       "recommended": false
+    },
+    {
+      "id": "gangdol.unity-tools-model",
+      "name": "unity-tools-model",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.1.0/unity-tools-model-0.1.0.vsix",
+          "sha256": "2e3f26ec9547ae874ff5b7ea2e3451c504355fd2949cd1982041d4c56b839e30",
+          "size": 22173,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "First version. Goes with Agent 0.2.17 and Edit 0.6.27; Unity Tools Desktop 0.5.0 has it built in.\n\n- **Model sets:** a named choice of provider, model and effort for Agent chats, Edit's Generate and Edit's Apply to\n  Unity, each on its own. Edit's parts also choose where images come from (Edit's image setting, Codex's image tool,\n  or OpenRouter with an image model).\n- **Manage Model Sets** page: sets on the left, one card per part, warnings for a missing model name, image model or\n  key, and a Providers and keys page. Model names ChatGPT sign-in offers come from `codex debug models` as\n  suggestions; any name is accepted.\n- **Providers:** ChatGPT sign-in (built in), OpenAI API, OpenRouter, Ollama, LM Studio, and any other Responses API\n  address. Codex 0.160 refuses the Chat Completions API for a custom provider, so only the Responses API is offered.\n- **Keys** live in VS Code's secret storage and reach Codex only as an environment variable\n  (`UNITY_TOOLS_MODEL_KEY_<ID>`); the settings Codex gets name that variable, not the key.\n- Agent and Edit ask this extension through its API (`apiVersion` 1: `list`, `resolve`, `environment`,\n  `onDidChange`, `openManager`). Without it they use their own model settings, as before.\n- Checked offline with `codex debug prompt-input` that Codex accepts a set's provider settings. Not yet run with a\n  live model call (this computer's Codex account is at its usage limit until Nov 10)."
+        }
+      ],
+      "displayName": "Unity Tools Model",
+      "description": "Named model sets for Unity Agent Tools and Unity Edit Tools: pick a provider, model and effort per part, then choose a set per Agent chat or Edit task.",
+      "summary": "Named model sets: choose the provider, model and effort for Agent chats and Edit tasks, per chat and per task.",
+      "order": 8,
+      "needs": [
+        "editor",
+        "codex"
+      ],
+      "worksWith": [
+        "gangdol.unity-agent-tools",
+        "gangdol.unity-edit-tools"
+      ],
+      "recommended": false
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T12:08:15.990Z"
+  "updatedAt": "2026-11-03T13:49:47.416Z"
 }
