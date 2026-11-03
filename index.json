@@ -189,6 +189,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.29",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.29/unity-edit-tools-0.6.29.vsix",
+          "sha256": "ad2540dc3a4699be8441b1c024c1657ec7104ace1f988b934a03156d5756eeb7",
+          "size": 880359,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **A task on Claude says Claude**: Edit's own progress, notes and errors for a Generate or Apply on Claude (Claude Code\n  sign-in) name Claude where they said Codex. The model's own messages are unchanged. Goes with Unity Tools Model 0.5.0."
+        },
+        {
           "version": "0.6.28",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.28/unity-edit-tools-0.6.28.vsix",
@@ -619,6 +631,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.5.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.5.0/unity-tools-model-0.5.0.vsix",
+          "sha256": "9e67244f9b8e775d53f8a538441b9af6fea490c9aa9a59224232639bf9a9fcd4",
+          "size": 4717673,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Setup can now install and sign in to Claude Code. Goes with Unity Tools Setup 0.1.2 and Edit 0.6.29; Unity Tools\nDesktop 0.8.0 has the same.\n\n- **Unity Tools Setup 0.1.2 installs, updates and signs in to Claude Code** when Unity Tools Model is selected there,\n  so the page and the errors point to it: \"Claude Code isn't signed in on this computer. Sign in with Unity Tools Setup\n  (or run \"claude auth login\" in a terminal)\", and likewise when it isn't installed.\n- Release stage: Preview."
+        },
+        {
           "version": "0.4.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.4.0/unity-tools-model-0.4.0.vsix",
@@ -661,7 +683,7 @@
       ],
       "displayName": "Unity Tools Model",
       "description": "Named model sets for Unity Agent Tools and Unity Edit Tools: pick a provider (ChatGPT, OpenAI, Anthropic, DeepSeek, OpenRouter, local) and model per part, then choose a set per Agent chat or Edit task.",
-      "summary": "Named model sets: choose the provider, model and effort for Agent chats and Edit tasks, per chat and per task.",
+      "summary": "Named model sets: choose the provider, model and effort for Agent chats and Edit tasks, per chat and per task. Includes Claude on your own Claude plan (Claude Code sign-in).",
       "order": 8,
       "needs": [
         "editor",
@@ -675,5 +697,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T16:33:56.490Z"
+  "updatedAt": "2026-11-03T16:49:46.715Z"
 }
