@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.7.0",
+  "latest": "0.8.0",
   "versions": [
+    {
+      "version": "0.8.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Preview: Setup → Claude installs, updates and signs in to Claude Code (Anthropic's installer, no administrator password). When a model set runs on Claude, a missing install or sign-in shows as something to fix and Fix Everything installs it; otherwise the rows are only offers. Claude's errors point to Setup and read in the app's language; Edit's progress for tasks on Claude says Claude. (Unity Tools Model 0.5.0, Edit 0.6.29.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.8.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "557934b029df92110898c835332a951b5aa858c6b55ca3924c4b115e79a6656d",
+          "size": 185925343,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "472b2664ba18d9b7a87beff1d98c2dfebfa92cfbe6a628f04c3514f99ed61f44",
+          "size": 186638051,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "0512a5d83f44a3b4a2934e679bf6fed0b0900fb7a07fe019b975d9429f8370b3",
+          "size": 172602681,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.8.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.7.0",
       "date": "2026-11-03",
