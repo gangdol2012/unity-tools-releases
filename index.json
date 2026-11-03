@@ -710,6 +710,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.11.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.11.0/unity-tools-model-0.11.0.vsix",
+          "sha256": "363b64a6c62d2b30c0ef6989f763ccd8ba7d89779e5a0d8cb61b4f3979c547b7",
+          "size": 4733319,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Milestone III for the API providers: spending. Unity Tools Desktop 0.14.0 has the same.\n\n- **Claude models on OpenRouter are cached**: OpenRouter caches a Claude conversation only when the request asks at\n  its top level, which Codex never does, so every step paid for the whole chat again. OpenRouter now goes through the\n  model bridge, which passes Codex's request on as it is and asks for caching on Claude models. OpenAI, DeepSeek,\n  Gemini and most others cache by themselves.\n- **Images only to models that see them**: a model OpenRouter lists as text-only gets a short note in place of each\n  image (a screenshot, a capture), instead of OpenRouter refusing the whole request.\n- OpenRouter's key stays in the bridge (Codex gets a token for this session, as for Anthropic and DeepSeek); its\n  statuses and messages come back unchanged, so failures still name what to check. Model Sets suggests the models\n  your OpenRouter key can use.\n- Release stage of every API provider: Experimental (Lower)."
+        },
+        {
           "version": "0.10.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.10.0/unity-tools-model-0.10.0.vsix",
@@ -826,5 +836,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T18:28:37.457Z"
+  "updatedAt": "2026-11-03T18:39:13.049Z"
 }
