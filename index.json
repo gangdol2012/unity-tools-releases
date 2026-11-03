@@ -189,6 +189,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.26",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.26/unity-edit-tools-0.6.26.vsix",
+          "sha256": "742727b071082c662b08d17dbe81568325a8b12145017a5e16c23ef7a054d467",
+          "size": 873140,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Less Codex usage per run: the model never falls through to `~/.codex/config.toml`, and long waits no longer depend on the model asking for them.\n\n- **An empty model means gpt-5.6-sol, and a \"default\" effort means low** (Generate and Apply; E265). Before, both fell through to whatever `~/.codex/config.toml` named.\n  - Unity Tools Desktop leaves the model empty, so from Nov 2 its Applies on the Windows PC ran gpt-6-astra · low. The VS Code extension there was set to gpt-5.6-sol · low.\n  - On the Pro Lite weekly limits, gpt-6-astra used about 1.85× as much per token (1.2–3.1×). Same-size Applies used the same tokens on both models, so a big Apply on gpt-5.6-sol uses about 45% less.\n  - A model or effort you set yourself is unchanged. To use another model, name it; \"empty\" no longer means \"what Codex would choose\".\n  - The Generate default runs on the pinned Codex CLI 0.144.6, like every `gpt-5` model.\n- **A code cell waits up to 5 minutes before handing control back**, on Codex 0.160 and newer: `features.code_mode.default_exec_yield_time_ms=300000` for Apply (its image sub-agents too) and Generate.\n  - A cell used to hand control back after about 10 s. Each hand-back is a model request that re-sends the whole context; waiting was about 10% of an Apply's usage after 0.6.21.\n  - The instructions already asked for this long wait (`wait` with `yield_time_ms` 300000). Now it no longer depends on the model asking. A cell still returns the moment its work finishes.\n  - Codex 0.144.6 re"
+        },
+        {
           "version": "0.6.24",
           "date": "2026-11-02",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.24/unity-edit-tools-0.6.24.vsix",
@@ -372,6 +384,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.16",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.16/unity-agent-tools-0.2.16.vsix",
+          "sha256": "f88ef96a671df11f3102e3f0298228192d4b2f282ecb2cbb4ae1458db26e205e",
+          "size": 18039238,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Waiting in a Unity-mode chat takes one model step, not dozens. Goes with Edit 0.6.26.\n\n- **A code cell in a Unity-mode chat or subagent waits up to 620 s before handing control back**, on Codex 0.160 and\n  newer. It's set per chat (`features.code_mode.default_exec_yield_time_ms`), also when a chat is resumed.\n  - Since 0.2.12 the instructions ask for this yield on waits. In the 9 live chats since then, 374 of 544 waits still\n    asked for 30 s or less. Each hand-back is a model request that re-sends the whole chat, and waiting was about 20% of\n    a chat's usage.\n  - A cell still returns the moment its work finishes. Plain Codex-mode chats are unchanged.\n  - Older Codex refuses the setting, so it's sent only to a Codex that reports 0.160 or newer.\n  - A message you send during a long wait reaches Codex when the wait ends, as it already did with the long waits the\n    instructions asked for.\n- **Edit tasks you start use Edit 0.6.26's defaults** (gpt-5.6-sol · low) when Edit's model setting is empty. Before,\n  they used whatever `~/.codex/config.toml` named.\n- Not yet run in a live chat."
+        },
+        {
           "version": "0.2.13",
           "date": "2026-11-01",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.13/unity-agent-tools-0.2.13.vsix",
@@ -540,5 +562,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-02T18:11:02.442Z"
+  "updatedAt": "2026-11-03T12:08:15.990Z"
 }
