@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.8.0",
+  "latest": "0.9.0",
   "versions": [
+    {
+      "version": "0.9.0",
+      "date": "2026-11-03",
+      "notes": "Claude (Claude Code sign-in), Experimental (Lower): your Claude plan's usage, spent as carefully as Codex spends ChatGPT's. Unity's tools load with the chat; long chats compact at about 245k tokens (the context bar measures against that); a new model or effort applies without restarting Claude Code; long Unity waits aren't cut off; chats take Claude Code's titles. Edit's parts on Claude run an empty effort at low, as on Codex. (Unity Tools Model 0.6.0, Edit 0.6.30.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.9.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "3dfa18446c85836f3bf7f257be14b40deae367668555684b0d4c6802157ee146",
+          "size": 185926599,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "7b79fe115cd942025778b652c52f8ed4a29751f350ab5f7e05fa76393f5dd173",
+          "size": 186639326,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "7731ef173c22daaa491ef86e8950c04975c3f5ffd22a1ce353c1e1d0e5c008d6",
+          "size": 172603912,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.9.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.8.0",
       "date": "2026-11-03",
