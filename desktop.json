@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.11.0",
+  "latest": "0.12.0",
   "versions": [
+    {
+      "version": "0.12.0",
+      "date": "2026-11-03",
+      "notes": "API providers, Canary (milestone I): OpenAI API, Anthropic API, DeepSeek API, OpenRouter, Ollama, LM Studio and Other start through the same milestones Claude went through, and Settings → Model Sets shows each one's stage. About 87k fewer tokens on every request on an API provider (your ChatGPT connectors are left out of those runs). Failures on an API provider name it and what to check (key, credits, model name, limits, a server on this computer), in Korean too; Ollama or LM Studio not running is said before the turn starts. (Unity Tools Model 0.9.0, Agent 0.2.21, Edit 0.6.32.)",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.12.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "d6f9993c3a9cdf74358c0854363db892d9c3090dafc8e4285a7e2a56be934ad2",
+          "size": 185936247,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "2650efa4426b0600911e94b50acbfddf3232a69adfb441c1a318ff780385396a",
+          "size": 186648980,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "cf6721485385a90afa1b8fe8a41a325928b7a1d1936aa41a46dd20d2b3875e28",
+          "size": 172613427,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.12.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.11.0",
       "date": "2026-11-03",
