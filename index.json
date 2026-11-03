@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.31",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.31/unity-edit-tools-0.6.31.vsix",
+          "sha256": "2a3b43ad9475da6d58f3ff5c5d7c5e187f98e1cc05704f11ed41b2cf5bad1c05",
+          "size": 881996,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **A model that stops early is asked to carry on**: when a Generate or Apply ends its turn with a progress line\n  instead of the final answer (seen with DeepSeek through OpenRouter), Edit asks the model to finish in the same chat,\n  up to three times, before the task fails. The failure then says the model ended its turn without the final answer,\n  instead of \"Codex completed without a thread id and final structured response\".\n- **Edit names the model it ran on**: Edit's own progress, notes and errors for a task on a model set name that set's\n  model (Claude, or the model's short name, such as `deepseek-v4.1-flash-1017`) where they said Codex; ChatGPT sets\n  still say Codex."
+        },
+        {
           "version": "0.6.30",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.30/unity-edit-tools-0.6.30.vsix",
@@ -455,6 +467,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.20",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.20/unity-agent-tools-0.2.20.vsix",
+          "sha256": "e4b412ccd3dad8bd7402b6a2448a598281c97f27675cc4d12261d1d73e6b44d4",
+          "size": 18046543,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Tools Model 0.7.0.\n\n- A chat on Claude open in another window says so (\"open in another window (another VS Code window or Unity Tools\n  Desktop)\") instead of naming Codex, and \"Connection hiccup — Claude is retrying…\" names Claude.\n- Closing a chat's Claude engine gives it a moment to close its Claude Code sessions and let its chats go before it is\n  stopped (Codex is stopped as before)."
+        },
+        {
           "version": "0.2.19",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.19/unity-agent-tools-0.2.19.vsix",
@@ -666,6 +688,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.7.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.7.0/unity-tools-model-0.7.0.vsix",
+          "sha256": "556d2ca88f40ad87ea083101910013d07f0969fcae9340ef032c2308615f05a4",
+          "size": 4724880,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "The hard cases. Goes with Agent 0.2.20; Unity Tools Desktop 0.10.0 has the same.\n\n- **One window at a time per chat**: a chat on Claude that another VS Code window or Unity Tools Desktop is writing is\n  refused there with a clear message (as Codex refuses a second writer); once that window closes, it continues here. A\n  lock left by a window that crashed is taken over.\n- **Stop while an approval is waiting** ends the turn at once and takes the question away.\n- **Windows**: Claude Code is found where Anthropic's installer, WinGet or npm put it (npm's `claude.cmd` runs its own\n  `claude.exe` directly). Claude Code has no sandbox on native Windows, so an Edit task runs with full access there, as\n  Codex does without its sandbox, and an Agent chat in **Project** asks before each command.\n- **Errors in plain words**: your plan's usage limit with the time it resets (\"…limit reached ∙ resets 3pm\", \"You've\n  hit your monthly spend limit\", \"usage limit reached|<time>\"), a brief rate limit or overload as \"busy right now\", and a\n  chat whose Claude Code conversation is gone (deleted, or started on another computer).\n- **Answers stay with their own turn**: a message you send just as Claude finishes is answered in that same turn\n  (Claude Code runs it as one more step), and Stop with messages still waiting closes that Claude Code, so nothing runs\n  unseen or lands in your next turn.\n- **Machines without Claude Code's sandbox** (native Windows, Linux without bubblewrap) run commands as the"
+        },
+        {
           "version": "0.6.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.6.0/unity-tools-model-0.6.0.vsix",
@@ -742,5 +774,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T17:03:12.575Z"
+  "updatedAt": "2026-11-03T17:45:26.749Z"
 }
