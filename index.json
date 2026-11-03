@@ -587,6 +587,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.2.0",
+          "date": "2026-11-03",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.2.0/unity-tools-model-0.2.0.vsix",
+          "sha256": "4b08db4a182ac17c4877e57d5e8691cc5a29b39ebfe744cb072222a12df421c3",
+          "size": 859386,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Anthropic (Claude) and DeepSeek as providers. Works with Agent 0.2.17 and Edit 0.6.27 as they are; Unity Tools Desktop\n0.5.1 has the same.\n\n- **Anthropic API and DeepSeek API** in Providers and keys, with their addresses built in and model names suggested\n  (the known ones, plus what a saved key can use).\n- **The model bridge**: Codex only speaks the OpenAI Responses API, which neither offers, so a translator on\n  `127.0.0.1` passes each Codex request on to Anthropic's Messages API (official SDK) or DeepSeek's Chat Completions.\n  - Codex gets the bridge's address and a session token; the provider key stays in the extension.\n  - Claude's thinking blocks (and where its text and tool calls sat between them) and DeepSeek's reasoning come back\n    on the next request unchanged, as both APIs require.\n  - Codex's own tools, Agent's and Edit's tool groups, images and parallel tool calls work as with ChatGPT; a tool\n    call cut off by the output limit doesn't run.\n  - Claude: adaptive thinking with the set's effort, prompt caching with the 1-hour lifetime (Unity waits can pass 5\n    minutes), and the server-side refusal fallback for Claude Opus 5.5, Sonnet 5.5, Opus 5 and Fable 5.1 through\n    Anthropic's own address.\n  - DeepSeek: `deepseek-v4-pro` can't see images, so images reach it as a short note; the set page warns for Edit parts.\n  - Codex compacts a bridged conversation at about 245k tokens, like ChatGPT models.\n  - Errors read in plain words (a refused key, no balance left, "
+        },
+        {
           "version": "0.1.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.1.0/unity-tools-model-0.1.0.vsix",
@@ -598,7 +608,7 @@
         }
       ],
       "displayName": "Unity Tools Model",
-      "description": "Named model sets for Unity Agent Tools and Unity Edit Tools: pick a provider, model and effort per part, then choose a set per Agent chat or Edit task.",
+      "description": "Named model sets for Unity Agent Tools and Unity Edit Tools: pick a provider (ChatGPT, OpenAI, Anthropic, DeepSeek, OpenRouter, local) and model per part, then choose a set per Agent chat or Edit task.",
       "summary": "Named model sets: choose the provider, model and effort for Agent chats and Edit tasks, per chat and per task.",
       "order": 8,
       "needs": [
@@ -613,5 +623,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T13:49:47.416Z"
+  "updatedAt": "2026-11-03T14:49:05.870Z"
 }
