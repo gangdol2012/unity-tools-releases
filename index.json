@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.34",
+          "date": "2026-11-04",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.34/unity-edit-tools-0.6.34.vsix",
+          "sha256": "a15f21505a7c156223662bb787e26f506c17d8d54a1541c97ee6c92407d5cd57",
+          "size": 884230,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- Reusables follow the model set: Apply on a reusable (updating the linked designs), Create and Link Reusables use the\n  set picked in the panel (its Generate part), and an agent's reusable tasks its chat's set. They ran on Edit's own\n  settings, which fails for someone whose sets are Claude-only.\n- A task started while Unity Tools Model is still starting waits for it instead of saying it isn't installed.\n- Goes with Unity Tools Model 0.14.0 (on Claude, a Generate or Apply that stops before its answer now carries on)."
+        },
+        {
           "version": "0.6.33",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.33/unity-edit-tools-0.6.33.vsix",
@@ -491,6 +503,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.23",
+          "date": "2026-11-04",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.23/unity-agent-tools-0.2.23.vsix",
+          "sha256": "6a246eb84d6a33baaef45d2b50d145f4edb9be370128585daa8a82dd3b314595",
+          "size": 18049943,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Tools Model 0.14.0.\n\n- A started chat keeps its provider when its model set changes: a set moved to another provider (or deleted) no\n  longer sends the chat's old model to the new provider. A ChatGPT chat goes on on ChatGPT; a chat whose set was\n  deleted takes the default set when it runs on the same provider (as Model Sets says); anything else says what to do.\n- A Claude chat switched to a Claude set that names no model uses Claude Code's default, not Codex's model.\n- A chat on an API provider no longer offers ChatGPT's models under \"This chat only\" (they don't run there).\n- The first chat after VS Code starts waits for Unity Tools Model, so it gets the default set; a chat started from\n  Unity Connection naming a model leaves the set, as picking a model in the panel does.\n- Edit's Create and Link Reusables follow the chat's model set too."
+        },
+        {
           "version": "0.2.22",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.22/unity-agent-tools-0.2.22.vsix",
@@ -732,6 +754,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.14.0",
+          "date": "2026-11-04",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.14.0/unity-tools-model-0.14.0.vsix",
+          "sha256": "29b5ade4b04b8393a9da01a3733bfd6beb80ff6d987b894b4c3e062336b7be08",
+          "size": 4740878,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "A pass over everything Model does, in VS Code and in Unity Tools Desktop 0.17.0 (goes with Agent 0.2.23 and Edit\n0.6.34), after three independent reviews. Checked with the real Codex and the real Claude Code against stand-ins, and\nwith Claude Code on a signed-in Claude plan; not run with a real API key.\n\n- **Efforts as Codex runs them now**: Codex 0.160 offers Max and Ultra for ChatGPT models. A set kept Max only on\n  Claude (ChatGPT got Extra high) and couldn't keep Ultra at all; both now run as picked on ChatGPT (Codex lowers them\n  to what the model has), Max on Claude, Extra high on API providers (Codex would send an unknown model Ultra as\n  medium). The pages offer each provider what it runs.\n- **Sets that can't run are marked**: a set with something to fix (a model name missing, no key, no address, Claude\n  asked to draw, an image model missing) has a mark in the list, so it's seen before a chat or task picks it.\n- **Typing isn't lost**: the Model Sets page kept focus through its own autosave only until the next save, so typing\n  after a pause went nowhere; Desktop's fields could lose half-typed text whenever something else redrew the page.\n- **Removing a provider** moves its sets to ChatGPT with ChatGPT's own model and effort (its model name would fail\n  there).\n- **Anthropic API**: a long chat can auto-compact (Anthropic refused the compaction request: tool calls without their\n  tools), and a blank text block Claude sometimes writes no longer breaks every later reques"
+        },
+        {
           "version": "0.13.0",
           "date": "2026-11-03",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.13.0/unity-tools-model-0.13.0.vsix",
@@ -878,5 +910,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-03T19:03:12.424Z"
+  "updatedAt": "2026-11-04T16:01:41.966Z"
 }
