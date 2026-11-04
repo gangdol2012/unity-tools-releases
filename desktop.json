@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.16.0",
+  "latest": "0.17.0",
   "versions": [
+    {
+      "version": "0.17.0",
+      "date": "2026-11-04",
+      "notes": "Model sets working well (Unity Tools Model 0.14.0, Agent 0.2.23, Edit 0.6.34). Settings › Model Sets marks a set that can't run (Needs attention), keeps half-typed text, and runs Max/Ultra efforts as Codex does now (ChatGPT as picked, Claude up to Max, API providers up to Extra high); removing a provider moves its sets to ChatGPT with ChatGPT's own model. Agent: a chat keeps its provider when its set changes or is deleted; a Claude chat on a set naming no model uses Claude Code's default; 'This chat only' no longer lists ChatGPT models for API-provider chats. Edit: reusables follow the model set. Anthropic API chats can auto-compact and no longer break on a blank reply block; refused requests read in plain words. Claude (Claude Code sign-in): Edit carries on when Claude stops early, reading files never asks, Claude Code ends with the app, plain errors.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.17.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "a87624fbe9d212db7869ff730ca3fcf3bb04020c037bcdf7a6a176f02dcb7cfe",
+          "size": 185949243,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "0ebe58fb8965023f1cb66a5be63ada658327b98b8620354c8c004659944514be",
+          "size": 186661968,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "ef7daa1b478cc2ffd6037fadbfc084c068163aca1fa8c83b21bfbe67384a0164",
+          "size": 172625443,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.17.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.16.0",
       "date": "2026-11-03",
