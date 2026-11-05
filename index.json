@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.36",
+          "date": "2026-11-05",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.36/unity-edit-tools-0.6.36.vsix",
+          "sha256": "f872af4ee34da0597440120bab30f4f0997f1b56fce0b1e6ab3fbca6ef0c06e1",
+          "size": 918161,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **The OpenAI API draws Edit's images.** Image Generation Settings offers a third image provider beside Codex and\n  OpenRouter: the OpenAI API with your own key (kept in VS Code's secret storage, billed to your OpenAI account). Its\n  image models are built in (GPT Image 2.6 Sunburst and Flare, 2.5 Sunburst and Flare, 2, 1.5, 1 Mini, ChatGPT Image;\n  OpenAI's default, GPT Image 2.5 Sunburst, when none is picked). A call with reference images goes to OpenAI's image\n  edits, one without to its generations; transparency is set per image and the output is PNG, as on OpenRouter. The\n  task's model gets Edit's own `openai_image` tool (the same fields, guard, image slots and saved files as\n  `openrouter_image`), and Codex's own image calls are routed the same way. OpenAI's refusals are said plainly: the\n  key, an organization OpenAI wants verified first, credit, its safety system, a refused argument.\n- **Arguments you keep, with real controls.** For the OpenAI API and OpenRouter, the page lists what the picked model\n  takes (quality, size or aspect ratio, resolution, images per call, seed, complexity, content filter and the rest of\n  OpenRouter's catalog) as fields. A value you set is kept on every image; a field left on **Chosen per image** is\n  picked by the task's model for each image (the rule Edit had for OpenRouter's JSON box since 0.6.0). OpenAI's custom\n  sizes are checked as you type (multiples of 16, at most 3,840, within 3:1). Picking another model clears only what\n  it c"
+        },
+        {
           "version": "0.6.35",
           "date": "2026-11-05",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.35/unity-edit-tools-0.6.35.vsix",
@@ -776,6 +788,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.16.0",
+          "date": "2026-11-05",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.16.0/unity-tools-model-0.16.0.vsix",
+          "sha256": "232d9f7edc8a293e9fa828b08bb08262bd1b2322cb44e12a7c8b76674c4f3571",
+          "size": 4808819,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **An Edit part can draw with the OpenAI API.** A set's **Images** list offers OpenAI API providers beside OpenRouter\n  ones. The image goes to that provider's address with its key; OpenAI's image models are listed (OpenAI's default\n  when none is picked).\n- **Each set keeps its own image arguments.** Under an Edit part that draws with the OpenAI API or OpenRouter, the\n  image model is picked from its list (OpenRouter's with what each model can do: reference images, transparent\n  backgrounds) and **Arguments** shows what that model takes as fields. A value set there is kept on every image of\n  that set's part; one left on **Chosen per image** is picked by the task's model each time. The same component as\n  Edit's own Image Generation Settings. Switching a part to another kind of image provider starts its image model and\n  arguments afresh.\n- Needs Unity Edit Tools 0.6.36: an older Edit asking for a set that draws with the OpenAI API or keeps arguments is\n  told to update (it would send the OpenAI key to OpenRouter, or draw without the arguments). Sets without either work\n  with any Edit. Unity Tools Desktop 0.19.0 has the same."
+        },
+        {
           "version": "0.15.0",
           "date": "2026-11-05",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.15.0/unity-tools-model-0.15.0.vsix",
@@ -942,5 +964,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-05T09:56:25.740Z"
+  "updatedAt": "2026-11-05T15:23:44.814Z"
 }
