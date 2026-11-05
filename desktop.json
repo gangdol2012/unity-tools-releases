@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.18.0",
+  "latest": "0.19.0",
   "versions": [
+    {
+      "version": "0.19.0",
+      "date": "2026-11-05",
+      "notes": "Unity Edit Tools 0.6.36 and Unity Tools Model 0.16.0.\n\n- Model Sets has its own window: sets on the left, the chosen one on the right, and Providers and Keys as its own page. Settings › Model Sets lists the sets and opens it, as does \"Manage model sets…\" in Agent and Edit.\n- The OpenAI API draws Edit's images. Settings › Edit offers Codex, OpenAI and OpenRouter; the OpenAI API uses your own key, kept in this computer's keychain and checked with Test without making an image.\n- Arguments you keep. For the OpenAI API and OpenRouter, pick the image model from its list and set any argument it takes (quality, size or aspect ratio, images per call, seed…). A value you set is kept on every image; the rest is picked by the task's model each time. Settings › Edit has Edit's own; each Edit part of a model set has its own.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.19.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "936d822db9a6f58abea5bbd5409672ef485cc8c78bb0c97ea110239612cfc81f",
+          "size": 186055857,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "ac42464e92f17d0b1bb52f360e7b99d393345d1f169fd55a24f28be1560eeea5",
+          "size": 186768574,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "b9b829e545df693d9cf18d2e1f831914cdedd9c894363d5fe1ea62e157052944",
+          "size": 172718510,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.19.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.18.0",
       "date": "2026-11-05",
