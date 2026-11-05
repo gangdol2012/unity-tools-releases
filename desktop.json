@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.19.0",
+  "latest": "0.20.0",
   "versions": [
+    {
+      "version": "0.20.0",
+      "date": "2026-11-05",
+      "notes": "A new install starts with three model sets (Good quality, Claude & OpenAI, is the default; two Average quality, very fast, with Claude & OpenRouter and with Claude & OpenRouter & OpenAI), with OpenRouter and the OpenAI API listed under Providers and Keys (each needs your own key). Edit's Codex models start at gpt-5.6-sol (Low) for Generate and gpt-6-astra (Low) for Apply to Unity. Settings you already saved stay as they are.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.20.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "277b6d55143fa8783ba5f2b65380507e5b957ff36eec0394e2e4b413cad22629",
+          "size": 186057448,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "bd25a82b840e0b490b2d15e6fee7f0a1fd9c5c821f02b48ecfe1351def85adfb",
+          "size": 186770162,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "f7fb3eb7788cfedabd19390c3434b8e9aa80b231f7ec7bfeb85648a1186c16db",
+          "size": 172719850,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.20.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.19.0",
       "date": "2026-11-05",
