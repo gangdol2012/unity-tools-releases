@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.6.35",
+          "date": "2026-11-05",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.35/unity-edit-tools-0.6.35.vsix",
+          "sha256": "835c8ed0acd733804dd49a8a1b94e79c50a1fee50247d6aaaa52a502dd1bea8b",
+          "size": 892195,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Codex's image tool works on every model set.** Codex offers its image tool only to ChatGPT's models, so a Generate\n  or Apply on Claude, the Anthropic or DeepSeek API, OpenRouter's text models or a model on this computer couldn't\n  draw with \"Codex image tool\" or with Edit's own image setting when it is Codex (Claude was refused, the others\n  failed during the task). Such a task now gets Edit's own image tool, `chatgpt_image.generate`, which makes each image\n  call as one short ChatGPT turn in Codex (your Codex sign-in, a ChatGPT plan with image generation; Edit's own model\n  setting for that part, low effort): the same image generation as a task on ChatGPT, with the same prepared-request\n  guard, image slots, saved files and corrections as OpenRouter's tool. A free ChatGPT plan or a Codex signed in with\n  an API key is said at once, with what to pick instead.\n- A set that leaves the effort to Edit runs Edit's own effort setting the way the set's provider takes it (Codex sent\n  a model it doesn't know **Ultra** as medium). Needs Unity Tools Model 0.15.0; older versions keep the old behaviour.\n- Goes with Unity Tools Model 0.15.0 (Generate and Apply on Ollama, LM Studio and other local or OpenAI-compatible\n  servers can call their tools now)."
+        },
+        {
           "version": "0.6.34",
           "date": "2026-11-04",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.34/unity-edit-tools-0.6.34.vsix",
@@ -503,6 +515,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.2.24",
+          "date": "2026-11-05",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.24/unity-agent-tools-0.2.24.vsix",
+          "sha256": "1b3cea5e6e6ae11b101b8f0afa8e743301d14a30ba9056299e646bd26cd87d95",
+          "size": 18050308,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Tools Model 0.15.0.\n\n- A chat on a model set that leaves the effort to Agent runs Agent's default effort the way the set's provider takes it:\n  an **Ultra** default reaches Anthropic, DeepSeek, OpenRouter and Ollama as their own most (Codex sent a model it\n  doesn't know Ultra as medium). Older Unity Tools Model versions keep the old behaviour.\n- With Unity Tools Model 0.15.0, chats on Ollama, LM Studio and other OpenAI-compatible servers get Agent's Unity tools\n  (a llama.cpp server never showed them to its model) and keep going while a model on this computer reads a long\n  prompt."
+        },
+        {
           "version": "0.2.23",
           "date": "2026-11-04",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.2.23/unity-agent-tools-0.2.23.vsix",
@@ -754,6 +776,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.15.0",
+          "date": "2026-11-05",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.15.0/unity-tools-model-0.15.0.vsix",
+          "sha256": "5ab1a778b8baaff5db03937cb64dbce9ce8df70f32d5134db06a7a81beeede9b",
+          "size": 4790496,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "A pass over every provider other than ChatGPT, so Agent chats and Edit tasks on them work as much like ChatGPT through\nCodex as each provider allows, and spend as little time and money as they can. Goes with Agent 0.2.24 and Edit\n0.6.35; Unity Tools Desktop 0.18.0 has the same. Also includes 0.14.1 (OpenRouter's tools, below), which wasn't\nreleased on its own. Checked with the real Codex against a real Ollama 0.40 and a real llama.cpp 0.9 server (Qwen3 4B)\nand a real LM Studio 0.4.28 (Qwen3 4B), and against stand-ins that refuse what the real servers refuse; not run with a\nreal API key.\n\n- **Ollama, LM Studio and Other go through the model bridge.** Codex sends Agent's Unity tools, Edit's own tools,\n  subagents and MCP servers as tool namespaces; a llama.cpp server never showed them to its model (it ran\n  `unity-play status` in the shell instead) and vLLM refuses them. They now reach every model as plain functions.\n- **Edit's Generate and Apply work on models on this computer.** Edit asks for its final answer in a JSON schema, and\n  local servers hold every word to it, so the model could never call a tool: on Ollama it answered at once, inventing\n  what Unity would have said. While tools are offered the schema goes into the instructions instead (Claude through\n  Anthropic's API and DeepSeek never saw it at all; now they do), and Edit's answer comes after the tools ran.\n- **Other takes Chat Completions too**, so any OpenAI-compatible address works (vLLM, llama.cpp, LiteLLM, a "
+        },
+        {
           "version": "0.14.0",
           "date": "2026-11-04",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.14.0/unity-tools-model-0.14.0.vsix",
@@ -910,5 +942,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-04T16:01:41.966Z"
+  "updatedAt": "2026-11-05T09:56:25.740Z"
 }
