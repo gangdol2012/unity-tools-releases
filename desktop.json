@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.17.0",
+  "latest": "0.18.0",
   "versions": [
+    {
+      "version": "0.18.0",
+      "date": "2026-11-05",
+      "notes": "Every provider, as close to ChatGPT as it gets: Unity Tools Model 0.15.0, Agent 0.2.24, Edit 0.6.35. Ollama, LM Studio and Other go through the model bridge (Unity tools reach their models; Edit's Generate and Apply can call tools; Other takes Chat Completions too); a slow local model isn't cut off and an unloaded one is loaded with enough context; Codex's image tool works for Edit on every provider (through ChatGPT); Max and Ultra run as each API provider's most; images go at the size the model reads them; Claude in Edit caches for 5 minutes.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.18.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "41a571d51857b3d6d5ec37777143b402b8a1d229ace812c3b6443d6cfa2d8974",
+          "size": 186008014,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "d994523b9cbb9339aefb2f852bc151140c98c48dc83064373b042ab96afb2954",
+          "size": 186720734,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "33d99c8d665fa7d1308a310b1d65e7aaeefd72836ddc2aecd1592e447a65d80b",
+          "size": 172674357,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.18.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.17.0",
       "date": "2026-11-04",
