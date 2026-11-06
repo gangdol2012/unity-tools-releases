@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.1",
+  "latest": "0.22.2",
   "versions": [
+    {
+      "version": "0.22.2",
+      "date": "2026-11-06",
+      "notes": "Model Sets: a Subagents line (model and effort) under Edit's Apply, on every provider (Unity Tools Model 0.18.0, Unity Edit Tools 0.7.3).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.2",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "c947880ae3e710790e581b041dc6363b0c22826a3b73602e61e0879423d5f73d",
+          "size": 186123821,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "7bff7ee5e01d24d53e066c16c435568d21973d0cf5f3c871c7a0e70047cb09aa",
+          "size": 186836551,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "1ef33ffe6b69b0d20f00d1fcd34e710aca717ac775623d05dbb8829d6c4aa81e",
+          "size": 172780311,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.2/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.1",
       "date": "2026-11-06",
