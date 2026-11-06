@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.7.2",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.2/unity-edit-tools-0.7.2.vsix",
+          "sha256": "1a7deee04e62b3e9c403a9da738775ebe847a26983e832ba22c840b284bfa9f8",
+          "size": 971591,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Asset designs are a Preview feature you can turn off.** New setting **Unity Edit Tools › Preview: Asset Designs**\n  (`unityEditTools.preview.assetDesigns`, on by default; with it on, nothing changes). Turned off, nothing of 0.7.0's\n  Single Asset and Atlas Asset designs applies:\n  - **New Asset Design…** and **Edit Image with Unity Edit Tools** leave the menus and the Command Palette.\n  - Existing asset designs still open and show their versions, but stay as they are: they can't be generated, applied\n    or corrected (Remove Deterioration), and their settings can't change. The panel says so and links to the setting.\n  - Generate on a screen design gets the Phase 1 instructions without the asset-design notes, exactly as 0.6.36 had them.\n  - Agents get no asset design tools, and the extension API refuses asset work with `ASSET_DESIGNS_OFF`;\n    `capabilities.assetDesigns` and `experimentalFeatures().assetDesigns` read the setting each time.\n- The switch covers only asset designs. **Reusables (Experimental)** keep their own setting, and everything else (0.7.1's\n  subagent model included) stays as it is either way."
+        },
+        {
           "version": "0.7.1",
           "date": "2026-11-06",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.1/unity-edit-tools-0.7.1.vsix",
@@ -550,6 +562,16 @@
       "id": "gangdol.unity-agent-tools",
       "name": "unity-agent-tools",
       "versions": [
+        {
+          "version": "0.3.2",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.3.2/unity-agent-tools-0.3.2.vsix",
+          "sha256": "36d2feda4003394d3485092a3493ddfd4c7c20aa8fcfdc1cc007b412f3f01b9a",
+          "size": 18056756,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Edit Tools 0.7.2. Built from 0.3.0 plus this change only (the 0.3.1 entry below is not in it).\n\n- **Follows Edit's asset design switch.** Single Asset and Atlas Asset designs are a Preview feature in Edit 0.7.2\n  (**Unity Edit Tools › Preview: Asset Designs**, on by default). While it is off, Codex gets no\n  `create_asset_design` or `asset_design` tool, no asset guidance in the chat's instructions, and `start_task` and\n  `create_design` read exactly as they did before asset designs (no image or folder destinations). With it on, nothing\n  changes. Reusables keep their own switch."
+        },
         {
           "version": "0.3.0",
           "date": "2026-11-06",
@@ -1008,5 +1030,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-06T14:25:58.004Z"
+  "updatedAt": "2026-11-06T14:40:01.268Z"
 }
