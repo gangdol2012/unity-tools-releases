@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.20.0",
+  "latest": "0.21.0",
   "versions": [
+    {
+      "version": "0.21.0",
+      "date": "2026-11-06",
+      "notes": "Single Asset and Atlas Asset designs (Unity Edit Tools 0.7.0, Unity Agent Tools 0.3.0).\n\n- New Design offers Single asset (one image, applied as a sprite file) and Atlas (a sheet of matching images, each applied as its own sprite file in a folder) beside UI and Screen. An atlas can be Interchangeable, for images that take turns in one spot such as icons or skins. A Single asset can start from an existing PNG and write back to it.\n- Apply to Unity for asset designs asks where to save and takes an optional note; Unity imports the files as sprites. Existing files keep their names, GUIDs and import settings; files not on the sheet are never deleted.\n- Reusables are Experimental and off by default (Settings › Edit).\n- Agent chats get the new design tools and guidance on which kind of design to use.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.21.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "a0bc82af3909e0daa0cf7c99d22ee78c9ef8c674ef41b192aeef109536930a62",
+          "size": 186113798,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "9d707ef9789155bd34e97bf927c9602de34fc8dbd1084d633d32559e5cf869c2",
+          "size": 186826508,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "05da0976ca689470a3d7bf94018eab80f3cf3f3c7009dbcd84a33b86fb60e5f8",
+          "size": 172770875,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.21.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.20.0",
       "date": "2026-11-05",
