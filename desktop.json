@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.0",
+  "latest": "0.22.1",
   "versions": [
+    {
+      "version": "0.22.1",
+      "date": "2026-11-06",
+      "notes": "Asset designs (Single asset, Atlas) can be turned off: Settings › Edit › Asset designs (Preview), on by default. With it on nothing changes; off, Edit works without them (New Design offers UI, Screen and Asset as in 0.20, asset designs open but can't be generated or applied, Agent doesn't make them). Reusables keep their own switch. Unity Edit Tools 0.7.2 and Unity Agent Tools 0.3.2.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "30b116dca327592437e7c95d56de6bd35ea5caeea664f0ff1ed4deecc8ab24b9",
+          "size": 186119453,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "f9225d845b7bbbac2f531d7500cacd5573d43a989b0547954c8df49bb80683e3",
+          "size": 186832165,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "db5a973110df6a23ca93acb455aa13f9dd5d4ca70d242bceb7f667565de46650",
+          "size": 172776312,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.0",
       "date": "2026-11-06",
