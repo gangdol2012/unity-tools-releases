@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.21.0",
+  "latest": "0.22.0",
   "versions": [
+    {
+      "version": "0.22.0",
+      "date": "2026-11-06",
+      "notes": "Optional subagent model for Edit's Apply in Model Sets; Claude chats and tasks send less with every request (Unity Tools Model 0.17.0, Unity Edit Tools 0.7.1).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "157f1bb5db49cba8e0a2516be47c82d8560697568b89a39dd6c618543066f472",
+          "size": 186116427,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "f1cee82e432ac4e75a9fdb502c11f28ddc643c96ba9859973cdceeb96894ac52",
+          "size": 186829138,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "84aba284634b4a79d0b4867e351794add904a753d89fc6156edfd9c46d0d098f",
+          "size": 172773285,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.21.0",
       "date": "2026-11-06",
