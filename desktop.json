@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.2",
+  "latest": "0.22.3",
   "versions": [
+    {
+      "version": "0.22.3",
+      "date": "2026-11-06",
+      "notes": "A fourth starting model set: Poor quality (fast, Claude & Codex). New installs only; saved sets are untouched.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.3",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "75ba362cd7897a3689161e0c03ae71873e678b9172937f070b853c94855f210d",
+          "size": 186123964,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "2fff8d3a19d6343510aba3be2225d37cfa0154a805d5cd00fc3f4f4068d5d8da",
+          "size": 186836684,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "38fc628a62bf5be20cf68d22c47afed734d8be0e26909733d2738bf82a2e02a1",
+          "size": 172780453,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.3/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.2",
       "date": "2026-11-06",
