@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.7.3",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.3/unity-edit-tools-0.7.3.vsix",
+          "sha256": "b26d4238f2e6cac165f667e574a02f092a1230f881f5b6a8b527714234bfc0ba",
+          "size": 972160,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **An Apply's subagents can also run at their own effort**, and on every provider. When the task's model set names a\n  subagent model or effort for Edit · Apply to Unity (Unity Tools Model 0.18.0), the helpers an Apply starts run on them\n  while the Apply keeps its own. On ChatGPT Edit passes both to Codex (Codex 0.153 or newer; an older Codex keeps the\n  Apply's model and effort for them and says so). On Claude and on every API provider Unity Tools Model applies them\n  itself, so they aren't limited to Codex's own models there.\n- Nothing else changes: a set that names neither, or no model set, runs as before."
+        },
+        {
           "version": "0.7.2",
           "date": "2026-11-06",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.2/unity-edit-tools-0.7.2.vsix",
@@ -844,6 +856,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.18.0",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.18.0/unity-tools-model-0.18.0.vsix",
+          "sha256": "fa49519ba082d469ef03c46d54149a69ee98420f9bf3b0be1198a29dbaee0963",
+          "size": 4816593,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Subagents get their own line, with effort.** Under Edit · Apply to Unity, a **Subagents** line under the Apply's own\n  Model and Effort holds the model and effort for the helpers an Apply starts. Empty (the default) = the Apply's own, as\n  before; the Apply itself always keeps the set's model and effort.\n- **Every provider.** Claude: any Claude model and effort (the Claude engine runs every subagent on them). ChatGPT: one\n  of Codex's own models and a level it takes (Codex 0.153 or newer, through Unity Edit Tools 0.7.3; the effort list\n  shows only what that model takes). Every API provider (OpenAI API, Anthropic API, DeepSeek, OpenRouter, Ollama,\n  LM Studio, Other): any of the provider's models and efforts. The model bridge runs a subagent's requests on them\n  (Codex marks each request with the agent that sends it) and leaves the task's own, its reviews and compactions alone;\n  each provider's own handling (prompt caching, images, effort) follows the subagent's model. Codex never sees the\n  subagent choice there, since it refuses subagent models outside its own list.\n- An OpenAI API set with a subagent choice reaches OpenAI through the bridge, passed on byte for byte (the real key\n  stays in the bridge) except a subagent's model and effort; without one it is called directly, as before.\n- Nothing changes for a set that leaves both empty."
+        },
+        {
           "version": "0.17.0",
           "date": "2026-11-06",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.17.0/unity-tools-model-0.17.0.vsix",
@@ -1030,5 +1052,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-06T14:40:01.268Z"
+  "updatedAt": "2026-11-06T15:36:57.621Z"
 }
