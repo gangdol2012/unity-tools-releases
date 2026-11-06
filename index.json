@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.7.1",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.1/unity-edit-tools-0.7.1.vsix",
+          "sha256": "0f64bcd62881dee06c040cb6f61cc750226b208a67ba0f78ca41205ce504df1e",
+          "size": 969163,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **An Apply's subagents can run on another model.** When the task's model set names a subagent model for Edit · Apply\n  to Unity (Unity Tools Model 0.17.0), the helpers an Apply starts for its pieces run on that model; the Apply itself\n  keeps the set's model. On Codex this needs Codex 0.153 or newer (an older Codex keeps the Apply's model for them and\n  says so in the Apply's progress), and the name must be one of Codex's own models. On Claude (Claude Code sign-in) the\n  set hands it to Unity Tools Model's Claude engine, which runs every subagent on it.\n- Nothing else changes: a set without a subagent model, or no model set, runs as before."
+        },
+        {
           "version": "0.7.0",
           "date": "2026-11-06",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.0/unity-edit-tools-0.7.0.vsix",
@@ -810,6 +822,16 @@
       "name": "unity-tools-model",
       "versions": [
         {
+          "version": "0.17.0",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.17.0/unity-tools-model-0.17.0.vsix",
+          "sha256": "2d3bb8b872a34a469aeb755d340d451ed5349ff2801db0677bbb7afd15269218",
+          "size": 4811946,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "- **Subagent model for Edit · Apply to Unity (optional).** A set's Apply part has a new **Subagent model** field. Empty\n  (the default) = the helpers an Apply starts run on the Apply's model, as before. Filled in = those helpers run on that\n  model, while the Apply itself keeps its own. Offered where it can work: Claude (Claude Code sign-in), where any Claude\n  model works (for example `haiku` under a `sonnet` Apply), and ChatGPT or the OpenAI API, where it must be one of Codex's\n  own models (the list suggests them, and the page warns about another name). Other providers don't show the field:\n  Codex refuses a subagent model outside its own list. Needs Unity Edit Tools 0.7.1 for Codex (Claude works with any\n  Edit that runs on the Claude engine).\n- **Claude chats and tasks send less with every request.** Measured on recorded Applies, an Apply on Claude costs about\n  a quarter less of the Claude plan's usage:\n  - Claude Code's agent-team, background and notification tools that no Unity Tools chat uses are left out (about 12k\n    tokens on every request). Web search and fetch stay.\n  - The person's claude.ai connectors (Claude Docs, Drive …) aren't loaded: they cost tokens on every request, and the\n    first one joining a few seconds into a chat made Claude Code send the whole conversation again.\n  - Claude Code's built-in skills and the skills synced from a claude.ai account aren't listed (about 6k tokens per\n    request, a subagent's too). Unity Tools' skills, the project's "
+        },
+        {
           "version": "0.16.0",
           "date": "2026-11-05",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-model-v0.16.0/unity-tools-model-0.16.0.vsix",
@@ -986,5 +1008,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-06T13:41:52.137Z"
+  "updatedAt": "2026-11-06T14:25:58.004Z"
 }
