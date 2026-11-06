@@ -212,6 +212,18 @@
       "name": "unity-edit-tools",
       "versions": [
         {
+          "version": "0.7.0",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.7.0/unity-edit-tools-0.7.0.vsix",
+          "sha256": "9ad44b7f33f4cef734a54598f60a99fa6fada235441fb88a4e157202721ee1a6",
+          "size": 968261,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "- **Single Asset and Atlas Asset designs.** Besides screen designs (a prefab or scene, applied as layered Unity objects),\n  Edit now makes designs whose Apply ships image files:\n  - A **Single Asset** design is one image: a character, an item, a prop, an effect still, a background. Apply to Unity\n    checks it (size, background, framing), fixes only what needs fixing, and saves it as a sprite file.\n  - An **Atlas Asset** design is a sheet of images with a matching feel, laid out on a grid. Apply finds each item,\n    names it and cuts it out into its own sprite file in a folder. Files already there keep their names and are replaced\n    in place, so everything that uses them shows the new art; files no longer on the sheet are left alone.\n  - An atlas can be **Interchangeable**: its items take turns in one spot in the game (icons, skins, avatars, card art),\n    so each is drawn to fit that spot and the set swaps without looking out of place.\n  - Start one with **Unity Edit Tools: New Asset Design…** (also on a folder's context menu), or right-click a PNG and\n    choose **Edit Image with Unity Edit Tools** to redesign an existing sprite: its Apply writes back to that image.\n- **Generate draws asset designs as the images that ship:** on a transparent background (switch it off for full-bleed\n  art such as a background), an atlas on a clean grid with gutters and no labels. On an atlas, attached references\n  become items (first on a new sheet, after the existing ones otherwise) unles"
+        },
+        {
           "version": "0.6.36",
           "date": "2026-11-05",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-edit-tools-v0.6.36/unity-edit-tools-0.6.36.vsix",
@@ -526,6 +538,16 @@
       "id": "gangdol.unity-agent-tools",
       "name": "unity-agent-tools",
       "versions": [
+        {
+          "version": "0.3.0",
+          "date": "2026-11-06",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.3.0/unity-agent-tools-0.3.0.vsix",
+          "sha256": "309c98d4728d74fe0181b16150958b0aae92d5df36c4057fa2eb07ab9010b85f",
+          "size": 18055554,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Edit Tools 0.7.0.\n\n- **Single Asset and Atlas Asset designs for Codex.** New tools `unity_edit.create_asset_design` (a Single Asset or an\n  Atlas Asset design, optionally Interchangeable, drawn on a transparent background unless it is full-bleed art, or\n  started from an existing PNG) and `unity_edit.asset_design` (its settings and the files at its destination). `start_task\n  apply` ships them: `destination: { type: \"image\" | \"folder\", path }`, or the design's own destination.\n- **When to use which** is in the chat's instructions, in this order: images meant to be swapped in one spot (icon lists,\n  skins, avatars, card art) always go in an Interchangeable atlas; keep images in the screen when the screen can carry\n  them; draw them separately when it can't or shouldn't — a Single Asset for images worth their own attention, an\n  Atlas Asset for the rest; one atlas per matching feel, without forcing unrelated images together. A screen no longer\n  needs to show every image it could display. On an atlas, references are added as items unless the prompt says\n  otherwise.\n- **Edit's Reusables are Experimental** (off by default in Edit 0.7.0): their tools and instructions are offered only\n  while the project has them turned on. Older Edit versions keep them as before.\n- A tool can now be offered per chat only while it is available; a call to one that was turned off explains why."
+        },
         {
           "version": "0.2.24",
           "date": "2026-11-05",
@@ -964,5 +986,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-05T15:23:44.814Z"
+  "updatedAt": "2026-11-06T13:41:52.137Z"
 }
