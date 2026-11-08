@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.4",
+  "latest": "0.22.5",
   "versions": [
+    {
+      "version": "0.22.5",
+      "date": "2026-11-08",
+      "notes": "When Generate or Apply runs on Claude or another non-ChatGPT model with Codex images, ChatGPT now does only the image call: the cheapest ChatGPT model your sign-in lists runs one fixed line, your exact prompt reaches the image tool straight from Edit, and the turn ends when the image is saved (one short request per image instead of several large ones).",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.5",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "13c5b05afc9c6e576e40aa049acf186b33dcc5beedcd92a56ab4091f01a6a86b",
+          "size": 186127443,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "2e7ee6f6b6b630a32fcd1172bf62b12cca9cd65a3e996fe59a4de74935046190",
+          "size": 186840168,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "c25e2b5b8fd263c59e05417b9d11b1afaa47553e857b1d7fdf58d6e61faa9ac0",
+          "size": 172783884,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.5/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.4",
       "date": "2026-11-08",
