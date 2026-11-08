@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.3",
+  "latest": "0.22.4",
   "versions": [
+    {
+      "version": "0.22.4",
+      "date": "2026-11-08",
+      "notes": "Images from Codex's image tool work again when Generate or Apply runs on Claude or another non-ChatGPT model: those calls now use the Codex installed on this computer (0.160 or newer makes transparent backgrounds). With only an older Codex, a transparent image stops at once and says to update Codex.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.4",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "9112cf548c1942fcf55dc5489c8dfa1cebb822822406035218ec5431fc9a4cf8",
+          "size": 186125072,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "5334a0ee952a81b7bb989d85295850c615860ad166b8ee055d95e8cad924fead",
+          "size": 186837802,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "dc3802685e820e660f597ff5891cbfe2cf2f0a0fe10cf55684c9ea3d2a0578a9",
+          "size": 172781587,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.4/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.3",
       "date": "2026-11-06",
