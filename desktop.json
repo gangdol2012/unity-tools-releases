@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.6",
+  "latest": "0.22.7",
   "versions": [
+    {
+      "version": "0.22.7",
+      "date": "2026-11-08",
+      "notes": "Codex images work again when Generate or Apply runs on Claude or another non-ChatGPT model with the pinned Codex 0.144.6 (a gpt-5 ChatGPT model): transparent backgrounds are made without the option that Codex lacks (the image is asked for in words, with a chroma-key cut-out kept for an image that still comes back opaque), and opaque images come back fully opaque. The image calls go direct: the cheapest ChatGPT model your sign-in lists runs one fixed line, your exact prompt reaches the image tool straight from Edit, one short request per image.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.22.7",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "c822397b0cedb4dbf76b8fee3a203df4b2c6257eccab86c227ac8757956cd916",
+          "size": 186136096,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "e1dfcaf5a870cc7e5c21577a0152749199e3783459f5594261add7e32221e8e2",
+          "size": 186848824,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "67b3edf231a6e3a1997dd45c5abaad4baeeda29bec73dcdbd98749e46662f5b7",
+          "size": 172792049,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.22.7/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.6",
       "date": "2026-11-08",
