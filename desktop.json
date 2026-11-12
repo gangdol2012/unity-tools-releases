@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.22.7",
+  "latest": "0.23.0",
   "versions": [
+    {
+      "version": "0.23.0",
+      "date": "2026-11-12",
+      "notes": "Agent can build your game: in a project with Build turned on, Agent's Unity chats see the profiles and recent builds, start a build and follow it to the end (size, the change since the last build, time; for a failure, Build's fixes and the first errors), answer Unity's questions while it builds, stop it, read reports and logs, and create, change or delete profiles. Codex asks you first before stopping a game you're playing, stopping a build you started, replacing an existing Xcode project, or deleting a profile no agent made, and it never sees keystore passwords. A build a chat starts is a row under it with live progress (Open, Stop), and the Build tab marks it with an Agent chip. Fixed: platform profiles (macOS, Android, iOS …) build again on Unity 6.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.23.0",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "5961c8c6ca33929d69881a482be53cfe0a0884da0d9fc924397cb642afff140e",
+          "size": 186159841,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "699f71d34bf1d5ad88f85e1a26a7022c19fb6b15f276301cd7872de66b5343a6",
+          "size": 186872553,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "065ca2faf0b54df5399c56a561f1d39fa8e4aeb01db4efd968f42ee77086fbe3",
+          "size": 172814378,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.0/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.22.7",
       "date": "2026-11-08",
