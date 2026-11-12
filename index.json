@@ -575,6 +575,16 @@
       "name": "unity-agent-tools",
       "versions": [
         {
+          "version": "0.4.0",
+          "date": "2026-11-12",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.4.0/unity-agent-tools-0.4.0.vsix",
+          "sha256": "cee280a79ef718622657d14267e9c4780cf4a2596b1882bbfd8ba5aa564c3150",
+          "size": 18079965,
+          "engine": "^1.90.0",
+          "dependencies": [],
+          "notes": "Goes with Unity Build Tools 0.3.0.\n\n- **Codex builds your game.** A new tool family, `unity_build`, gives Unity-mode chats your own Unity Build: `status`\n  (profiles, where each builds to, what's running, recent builds), `build` and one long `wait` (it returns when the\n  build ends, with its size and the change since the last build, how long it took, and for a failure Build's fixes\n  and the first errors), `answer` (a question Unity asks during the build), `stop`, `history`, `report` (what takes\n  the space, slowest steps, errors and warnings), `log` (Build's log or Unity's own, filtered and searchable) and\n  `profile` / `create_profile` / `change_profile` / `delete_profile` (scenes, scripting defines, platform settings\n  such as Development Build, the active profile).\n- **Balanced, not locked down.** Codex builds, switches platforms when you asked for that platform's build, saves\n  open scenes for the build and edits profiles on its own. It asks you in the chat before it stops a game you're\n  playing (Unity itself says whether it is playing), stops a build you started (only that build), replaces an\n  existing Xcode project unless your own Build answer is \"Replace\" (Editor and background builds), or deletes a\n  profile no agent made (it goes to the Trash). A build Codex was about to start doesn't start once you press Stop. Keystore passwords never reach Codex: a build that needs them asks you\n  to enter them in Unity Build. A one-off build location must be inside the project'"
+        },
+        {
           "version": "0.3.2",
           "date": "2026-11-06",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-agent-tools-v0.3.2/unity-agent-tools-0.3.2.vsix",
@@ -736,7 +746,7 @@
         }
       ],
       "displayName": "Unity Agent Tools",
-      "description": "A Codex chat panel that can play, record, debug and edit your Unity project through Unity Play, Debug and Edit Tools.",
+      "description": "A Codex chat panel that can play, record, debug, edit and build your Unity project through Unity Play, Debug, Edit and Build Tools.",
       "summary": "A Codex chat that can play, record, debug and edit your Unity project for you.",
       "order": 5,
       "needs": [
@@ -747,7 +757,8 @@
       "worksWith": [
         "gangdol.unity-play-tools",
         "gangdol.unity-edit-tools",
-        "gangdol.unity-debug-tools"
+        "gangdol.unity-debug-tools",
+        "gangdol.unity-build-tools"
       ],
       "recommended": true
     },
@@ -816,6 +827,18 @@
       "name": "unity-build-tools",
       "versions": [
         {
+          "version": "0.3.0",
+          "date": "2026-11-12",
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-build-tools-v0.3.0/unity-build-tools-0.3.0.vsix",
+          "sha256": "df963e6afc19aba96019f55da74eb6f87cb7ba1266cd99cd1d94e3d354258524",
+          "size": 278657,
+          "engine": "^1.90.0",
+          "dependencies": [
+            "gangdol.unity-tools-base"
+          ],
+          "notes": "Goes with Unity Agent Tools 0.4.0. Unity package 0.3.0.\n\n- **Unity Agent can build.** The extension's API has `agent` (`service()`, `onEvent()`, `open(buildId)`,\n  `installed()`, `projectRoot()`): Unity Agent Tools' Codex chats build on the same service as the panel, so there\n  is still one build at a time and one history. `service({ setUp: true })` adds the Unity package the way the\n  panel's Set Up does.\n- **Builds Unity Agent started are marked.** An **Agent** chip on the live build, in History and in the report\n  (\"Started by Unity Agent in “…”\" with the chat's name), kept in the build's record (`origin.json`).\n- **Open a build from the chat.** The chat's **Open** on a build row shows that build in the panel: its progress or\n  result card when it's the latest build, otherwise its report.\n- **Fixed: platform profiles build again on Unity 6.** Building a platform profile (macOS, Android, iOS …, not a\n  Build Profile asset) failed at once with \"Active build profile is null.\", in the Editor and in the background:\n  Unity 6 refuses a platform as the active profile, which the profile build call makes it. Platforms now build\n  the classic way, with their own Development Build setting; a custom profile that was active is made inactive\n  first, before the keystore passwords and build number are set, so they go to the project's Player Settings\n  (verified on Unity 6000.4: macOS and Android in the background, Android in the Editor, also with a custom\n  profile active).\n- While a bui"
+        },
+        {
           "version": "0.2.1",
           "date": "2026-11-02",
           "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-build-tools-v0.2.1/unity-build-tools-0.2.1.vsix",
@@ -848,7 +871,9 @@
         "editor",
         "unity"
       ],
-      "worksWith": [],
+      "worksWith": [
+        "gangdol.unity-agent-tools"
+      ],
       "recommended": false
     },
     {
@@ -1052,5 +1077,5 @@
     }
   ],
   "repository": "gangdol2012/unity-tools-releases",
-  "updatedAt": "2026-11-06T15:36:57.621Z"
+  "updatedAt": "2026-11-12T15:07:15.659Z"
 }
