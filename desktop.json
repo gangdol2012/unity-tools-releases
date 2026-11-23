@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.23.0",
+  "latest": "0.23.1",
   "versions": [
+    {
+      "version": "0.23.1",
+      "date": "2026-11-23",
+      "notes": "Agent: attach any kind of file, not only pictures. Files you attach with the attach button, drag onto the message box or paste now reach Codex, which opens them itself (before, only images reached it). This also covers files sent from Unity Connect. A pasted file that isn't in a folder (from a browser, say) is saved under its own name, up to 50 MB.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.23.1",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "f31bf7854627d72ce92c43f45732683f75a13d9da821addfff74fc09f5fb0ed2",
+          "size": 186161507,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "64a68bc6a6c6f9e35b1298d164338352725b82f1397e948c69398ea88571e62d",
+          "size": 186874225,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "955d0e182ccdcb23b70f703d1dd973cbe196ef0bc6bd4dbb46225607fd3a06f7",
+          "size": 172816192,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.1/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.23.0",
       "date": "2026-11-12",
