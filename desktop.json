@@ -1,7 +1,33 @@
 {
   "schemaVersion": 1,
-  "latest": "0.23.1",
+  "latest": "0.23.2",
   "versions": [
+    {
+      "version": "0.23.2",
+      "date": "2026-11-24",
+      "notes": "Unity answers its own “changed on disk” questions. When an agent, Git or another app changes a scene, prefab or UI Builder file that is open in Unity, Unity now reloads it by itself instead of stopping to ask, even when its window is hidden or on another desktop, and without any Accessibility permission. Pick the answer for each question, or leave it to you, in Settings › Unity’s Questions; the app shows a short notice when Unity answers. Reloading drops changes to that file you hadn’t saved in Unity. A project gets this with its next Unity Tools update (Unity Tools Base 0.1.7), which happens when you open it here.",
+      "page": "https://github.com/gangdol2012/unity-tools-releases/releases/tag/unity-tools-desktop-v0.23.2",
+      "downloads": {
+        "mac-arm64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-mac-arm64.zip",
+          "sha256": "f1264e21e38c4b46da24fe56c683d2830d019d52ea6562ea3fa946d71c23d8a0",
+          "size": 186173182,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-mac-arm64.dmg"
+        },
+        "mac-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-mac-x64.zip",
+          "sha256": "148fd9e3d5ca4dbcd689a42b6b907d0328bf2b8781f71615a3debc810f7e2186",
+          "size": 186885899,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-mac-x64.dmg"
+        },
+        "win-x64": {
+          "url": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-win-x64.exe",
+          "sha256": "fef14c6494ed4ea85e7decabe614aad01cb6c0eeb3f3a1ded89543f796a1a6ea",
+          "size": 172826500,
+          "installer": "https://github.com/gangdol2012/unity-tools-releases/releases/download/unity-tools-desktop-v0.23.2/Unity-Tools-Desktop-win-x64.exe"
+        }
+      }
+    },
     {
       "version": "0.23.1",
       "date": "2026-11-23",
